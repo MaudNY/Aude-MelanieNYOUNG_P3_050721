@@ -26,4 +26,4 @@
         - 3 = Logo coeur
 
 .FOOTER
-- FLEXBOX Vertical comprenant 4 lignes
+- FLEXBOX Vertical comprenant 5 éléments (1 logo + 4 lignes)

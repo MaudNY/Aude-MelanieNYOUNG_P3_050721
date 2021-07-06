@@ -1,0 +1,29 @@
+
+>>>>>> MAQUETTE ACCUEIL <<<<<<<
+
+- HEAD -
+...(Méta-données)...
+
+- BODY -
+
+.HEADER
+- Logo ohmyfood (centré)
+
+.FORMULAIRE DE RECHERCHE
+- Composant : Recherche textuelle
+- BLOCK : "Explorez nos restaurants"
+
+.SECTION "Fonctionnement"
+- 3 Blocks --> étapes de navigation
+
+.SECTION "Restaurants"
+- 4 Blocks comprenant :
+    - 1 image ;
+    - 1 vignette "Nouveau" (optionnel) ;
+    - 1 FLEXBOX :
+        - 1 = Nom du restaurants
+        - 2 = Localisation du restaurant
+        - 3 = Logo coeur
+
+.FOOTER
+- FLEXBOX Vertical comprenant 4 lignes

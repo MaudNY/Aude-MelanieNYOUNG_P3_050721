@@ -18,32 +18,40 @@
 
             <!-- EN-TÊTE -->
             <header>
-                <p><img src="public/images/logo/ohmyfood.png" alt="ohmyfood" /></p>
+                <p><img src="images/logo/ohmyfood.png" alt="ohmyfood" /></p>
             </header>
+
+        </div>
 
             <!-- FORMULAIRE DE RECHERCHE -->
             <section>
-                <div>
-                    <h1>Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button>Explorer nos restaurants</button>
+
+                <div class="container">
+                    <div>
+                        <h1>Réservez le menu qui vous convient</h1>
+                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                        <button>Explorer nos restaurants</button>
+                    </div>
+                    <form method="POST" action="#">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" name="localisation" />
+                    </form>
                 </div>
-                <form method="POST" action="#">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" name="localisation" />
-                </form>
+
             </section>
 
             <!-- SECTION FONCTIONNEMENT -->
             <section>
 
-                <h1>Fonctionnement</h1>
+                <div class="container">
+                    <h1>Fonctionnement</h1>
 
-                <div>
-                    <div>1</div>
                     <div>
-                        <i class="fas fa-mobile-alt"></i>
-                        <div>Choisissez un restaurant</div>
+                        <div>1</div>
+                        <div>
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>Choisissez un restaurant</div>
+                        </div>
                     </div>
                 </div>
 
@@ -52,42 +60,44 @@
             <!-- SECTION RESTAURANTS -->
             <section>
 
-                <h1>Restaurants</h1>
+                <div class="container">
+                    <h1>Restaurants</h1>
 
-                <div>
-                    <a href="#">
-                        <img src="/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
-                        <div class="thumbnail-nouveau">Nouveau</div>
-                    </a>
                     <div>
                         <a href="#">
-                            <h2>La palette du goût</h2>
-                            <p>Ménilmontant</p>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+                            <div class="thumbnail-nouveau">Nouveau</div>
                         </a>
-                        <button><i class="far fa-heart"></i></button>
+                        <div>
+                            <a href="#">
+                                <h2>La palette du goût</h2>
+                                <p>Ménilmontant</p>
+                            </a>
+                            <button><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
 
             </section>
 
-        </div>
-
         <!-- PIED-DE-PAGE -->
         <footer>
 
-            <div><img src="/public/images/logo/ohmyfood.png" alt="ohmyfood" /></div>
-            <ul>
-                <li><a href="#">
-                    <i class="fas fa-utensils"></i>
-                    <div>Proposer un restaurant</div>
-                </a></li>
-                <li><a href="#">
-                    <i class="fas fa-hands-helping"></i>
-                    <div>Devenir partenaire</div>
-                </a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:prénom.nom@gmail.com">Contact</a></li>
-            </ul>
+            <div class="container">
+                <div><img src="images/logo/ohmyfood.png" alt="ohmyfood" /></div>
+                <ul>
+                    <li><a href="#">
+                        <i class="fas fa-utensils"></i>
+                        <div>Proposer un restaurant</div>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        <div>Devenir partenaire</div>
+                    </a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="mailto:prénom.nom@gmail.com">Contact</a></li>
+                </ul>
+            </div>
 
         </footer>
 

@@ -47,8 +47,8 @@ header {
 header .header__heading {
   font-size: 1.8em;
   flex: 1;
-  margin-top: 0.65em;
-  margin-bottom: 0.65em;
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
   padding-left: 1.65em;
 }
 header .header__heading--active {
@@ -60,8 +60,8 @@ header .header__heading--inactive {
 
 /* COMPONENTS */
 .header__btn {
-  width: 5em;
-  height: 5em;
+  width: 4.8em;
+  height: 4.8em;
   background-color: white;
   border: black;
   padding: 0;

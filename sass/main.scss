@@ -15,6 +15,7 @@
 /* Éléments génériques du site */
 body {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 header, h3 {
@@ -25,6 +26,55 @@ header, h3 {
 	font-family: Roboto, serif, Arial;
 }
 
-/* UTILS */
+a, ul {
+	text-decoration-line: none;
+	color: black;
+}
 
-/* Les variables */
+/* UTILS - 1 Les variables*/
+
+/* Couleurs */
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$initial-background-color: white;
+
+/* Mensurations */
+$container-margin: 1.25em;
+$header__button-size: 5em;
+
+/* UTILS - 2 Les fonctions */
+
+/* UTILS - 3 Les mixins */
+
+/* LAYOUTS */
+.container {
+	margin: 0 $container-margin;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	.header__heading {
+		font-size: 1.8em;
+		flex: 1;
+		margin-top: 0.65em;
+		margin-bottom: 0.65em;
+		padding-left: 1.65em;
+	}
+}
+
+/* COMPONENTS */
+
+.header__button {
+	width: $header__button-size;
+	height: $header__button-size;
+	background-color: $initial-background-color;
+	border: black;
+	padding: 0;
+	i {
+		font-size: 1.75em;
+	}
+}
+
+/* PAGES */

@@ -13,6 +13,7 @@
 /* Éléments génériques du site */
 body {
   box-sizing: border-box;
+  margin: 0;
 }
 
 header, h3 {
@@ -23,7 +24,45 @@ header, h3 {
   font-family: Roboto, serif, Arial;
 }
 
-/* UTILS */
-/* Les variables */
+a, ul {
+  text-decoration-line: none;
+  color: black;
+}
+
+/* UTILS - 1 Les variables*/
+/* Couleurs */
+/* Mensurations */
+/* UTILS - 2 Les fonctions */
+/* UTILS - 3 Les mixins */
+/* LAYOUTS */
+.container {
+  margin: 0 1.25em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+header .header__heading {
+  font-size: 1.8em;
+  flex: 1;
+  margin-top: 0.65em;
+  margin-bottom: 0.65em;
+  padding-left: 1.65em;
+}
+
+/* COMPONENTS */
+.header__button {
+  width: 5em;
+  height: 5em;
+  background-color: white;
+  border: black;
+  padding: 0;
+}
+.header__button i {
+  font-size: 1.75em;
+}
+
+/* PAGES */
 
 /*# sourceMappingURL=style.css.map */

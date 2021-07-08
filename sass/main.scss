@@ -41,7 +41,7 @@ $initial-background-color: white;
 
 /* Mensurations */
 $container-margin: 1.25em;
-$header__button-size: 5em;
+$header__btn-size: 5em;
 
 /* UTILS - 2 Les fonctions */
 
@@ -55,20 +55,27 @@ $header__button-size: 5em;
 header {
 	display: flex;
 	flex-direction: row;
+	box-shadow: 1.5px 1.5px 5px #cac9c9;
 	.header__heading {
 		font-size: 1.8em;
 		flex: 1;
 		margin-top: 0.65em;
 		margin-bottom: 0.65em;
 		padding-left: 1.65em;
+		&--active {
+			display: initial;
+		}
+		&--inactive {
+			display: none;
+		}
 	}
 }
 
 /* COMPONENTS */
 
-.header__button {
-	width: $header__button-size;
-	height: $header__button-size;
+.header__btn {
+	width: $header__btn-size;
+	height: $header__btn-size;
 	background-color: $initial-background-color;
 	border: black;
 	padding: 0;

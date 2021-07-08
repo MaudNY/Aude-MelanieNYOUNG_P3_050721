@@ -1,6 +1,29 @@
-.btn {
-  color: red;
-  background-color: green;
+@charset "UTF-8";
+/*BASE - Fondations du site */
+/* Police générique du site ohmyfood */
+@font-face {
+  font-family: "Roboto";
+  src: url(police-roboto/Roboto-Regular-webfont.ttf), url(police-roboto/Roboto-Regular-webfont.eot), url(police-roboto/Roboto-Regular-webfont.svg), url(police-roboto/Roboto-Regular-webfont.woff);
 }
+/* Police des titres "Nom de restaurant" du site ohmyfood */
+@font-face {
+  font-family: "Shrikhand";
+  src: url(police-shrikhand/Shrikhand-Regular.otf);
+}
+/* Éléments génériques du site */
+body {
+  box-sizing: border-box;
+}
+
+header, h3 {
+  font-family: Shrikhand, serif, Arial;
+}
+
+.container {
+  font-family: Roboto, serif, Arial;
+}
+
+/* UTILS */
+/* Les variables */
 
 /*# sourceMappingURL=style.css.map */

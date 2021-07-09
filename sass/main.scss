@@ -44,7 +44,7 @@ $bg-colour-tertiary: #EAEAEA;
 /* Mensurations */
 $container-margin: 1.25em;
 $block-size: (header-btn-size: 4.8em, input-height: 3em);
-$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 0.9em);
+$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em);
 $header__heading-margin: 0.6em, 0.4em;
 
 $sticky: sticky;
@@ -52,23 +52,28 @@ $sticky: sticky;
 /* UTILS - 2 Les fonctions */
 
 /* UTILS - 3 Les mixins */
+@mixin light-input-placeholder {
+	font-weight: normal;
+}
 
 /* LAYOUTS */
 .container {
 	margin: 0 $container-margin;
 }
 
-#sticky-header {
-	display: flex;
-	flex-direction: row;
-	z-index: 9999;
+header {
 	box-shadow: 1.5px 1.5px 5px #cac9c9;
-	#header__heading {
-		font-size: map-get($font-size, header-heading);
-		flex: 1;
-		margin-top: nth($header__heading-margin, 1);
-		margin-bottom: nth($header__heading-margin, 2);
-		padding-left: 1.65em;
+	z-index: 9999;
+	#sticky-header {
+		display: flex;
+		flex-direction: row;
+		#header__heading {
+			font-size: map-get($font-size, header-heading);
+			flex: 1;
+			margin-top: nth($header__heading-margin, 1);
+			margin-bottom: nth($header__heading-margin, 2);
+			padding-left: 1.65em;
+		}
 	}
 }
 
@@ -80,12 +85,21 @@ $sticky: sticky;
 form {
 	background-color: $bg-colour-tertiary;
 	text-align: center;
-	input {
-		height: map-get($block-size, input-height);
-		font-size: map-get($font-size, form-input);
-		text-align: center;
-	}
-	
+}
+
+#block-input {
+	height: map-get($block-size, input-height);
+	font-size: map-get($font-size, form-input);
+	font-weight: bold;
+	text-align: center;
+	background-color: $bg-colour-tertiary;
+	border: none;
+	outline: none;
+}
+
+input::placeholder {
+	font-weight: lighter;
+	color: #a8a8a8;
 }
 
 /* COMPONENTS */

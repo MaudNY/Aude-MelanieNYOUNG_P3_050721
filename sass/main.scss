@@ -22,7 +22,7 @@ header, h3 {
 	font-family: Shrikhand, serif, Arial;
 }
 
-.container {
+.container, input {
 	font-family: Roboto, serif, Arial;
 }
 
@@ -37,11 +37,17 @@ a, ul {
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-$initial-background-color: white;
+$bg-colour-primary: white;
+$bg-colour-secondary: #F6F6F6;
+$bg-colour-tertiary: #EAEAEA;
 
 /* Mensurations */
 $container-margin: 1.25em;
-$header__btn-size: 4.8em;
+$block-size: (header-btn-size: 4.8em, input-height: 3em);
+$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 0.9em);
+$header__heading-margin: 0.6em, 0.4em;
+
+$sticky: sticky;
 
 /* UTILS - 2 Les fonctions */
 
@@ -52,35 +58,47 @@ $header__btn-size: 4.8em;
 	margin: 0 $container-margin;
 }
 
-header {
+#sticky-header {
 	display: flex;
 	flex-direction: row;
+	z-index: 9999;
 	box-shadow: 1.5px 1.5px 5px #cac9c9;
-	.header__heading {
-		font-size: 1.8em;
+	#header__heading {
+		font-size: map-get($font-size, header-heading);
 		flex: 1;
-		margin-top: 0.6em;
-		margin-bottom: 0.4em;
+		margin-top: nth($header__heading-margin, 1);
+		margin-bottom: nth($header__heading-margin, 2);
 		padding-left: 1.65em;
-		&--active {
-			display: initial;
-		}
-		&--inactive {
-			display: none;
-		}
 	}
+}
+
+#block-research {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+form {
+	background-color: $bg-colour-tertiary;
+	text-align: center;
+	input {
+		height: map-get($block-size, input-height);
+		font-size: map-get($font-size, form-input);
+		text-align: center;
+	}
+	
 }
 
 /* COMPONENTS */
 
-.header__btn {
-	width: $header__btn-size;
-	height: $header__btn-size;
-	background-color: $initial-background-color;
+#header__btn {
+	width: map-get($block-size, header-btn-size);
+	height: map-get($block-size, header-btn-size);
+	background-color: $bg-colour-primary;
 	border: black;
 	padding: 0;
 	i {
-		font-size: 1.75em;
+		font-size: map-get($font-size, header-btn-icon);
+		font-weight: bold;
 	}
 }
 

@@ -20,7 +20,7 @@ header, h3 {
   font-family: Shrikhand, serif, Arial;
 }
 
-.container {
+.container, input {
   font-family: Roboto, serif, Arial;
 }
 
@@ -39,35 +39,46 @@ a, ul {
   margin: 0 1.25em;
 }
 
-header {
+#sticky-header {
   display: flex;
   flex-direction: row;
+  z-index: 9999;
   box-shadow: 1.5px 1.5px 5px #cac9c9;
 }
-header .header__heading {
+#sticky-header #header__heading {
   font-size: 1.8em;
   flex: 1;
   margin-top: 0.6em;
   margin-bottom: 0.4em;
   padding-left: 1.65em;
 }
-header .header__heading--active {
-  display: initial;
+
+#block-research {
+  display: flex;
+  flex-direction: column-reverse;
 }
-header .header__heading--inactive {
-  display: none;
+
+form {
+  background-color: #EAEAEA;
+  text-align: center;
+}
+form input {
+  height: 3em;
+  font-size: 0.9em;
+  text-align: center;
 }
 
 /* COMPONENTS */
-.header__btn {
+#header__btn {
   width: 4.8em;
   height: 4.8em;
   background-color: white;
   border: black;
   padding: 0;
 }
-.header__btn i {
+#header__btn i {
   font-size: 1.75em;
+  font-weight: bold;
 }
 
 /* PAGES */

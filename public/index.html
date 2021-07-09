@@ -16,24 +16,26 @@
 
         <!-- EN-TÊTE -->
         <header>
-            <button class="header__btn header__btn--active header__btn--inactive"><a href="index.html"><i class="fas fa-arrow-left"></i></a></button>
-            <p class="header__heading">ohmyfood</p>
+            <div id="sticky-header">
+                <button id="header__btn"><a href="index.html"><i class="fas fa-arrow-left"></i></a></button>
+                <p id="header__heading">ohmyfood</p>
+            </div>
         </header>
 
         <!-- FORMULAIRE DE RECHERCHE -->
-        <section>
+        <section id="block-research">
 
-            <div class="container">
-                <div>
+            <div id="block-explorer">
+                <div class="container">
                     <h1>Réservez le menu qui vous convient</h1>
                     <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                     <button>Explorer nos restaurants</button>
                 </div>
-                <form method="POST" action="#">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" name="localisation" />
-                </form>
             </div>
+            <form method="POST" action="#">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" name="localisation" />
+            </form>
 
         </section>
 

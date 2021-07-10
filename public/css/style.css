@@ -26,7 +26,6 @@ header, h3 {
 
 a, ul {
   text-decoration-line: none;
-  color: black;
 }
 
 /* UTILS - 1 Les variables*/
@@ -64,8 +63,7 @@ form {
   background-color: #EAEAEA;
   text-align: center;
 }
-
-#block-input {
+form input {
   height: 3em;
   font-size: 1em;
   font-weight: bold;
@@ -74,17 +72,46 @@ form {
   border: none;
   outline: none;
 }
-
-input::placeholder {
+form input::placeholder {
   font-weight: lighter;
   color: #a8a8a8;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+footer ul {
+  padding: 0;
+}
+footer ul > li {
+  list-style-type: none;
+}
+footer ul > li a {
+  text-decoration-line: none;
+  color: #FFFFFF;
+}
+footer ul .footer-flex {
+  display: flex;
+  flex-direction: row;
+}
+footer ul .footer-flex .footer-flex-icon {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 0.75em;
+  height: 1em;
+  text-align: center;
+}
+footer ul .footer-flex .footer-flex-desc {
+  flex: 1;
+  padding-left: 1em;
 }
 
 /* COMPONENTS */
 #header__btn {
   width: 4.8em;
   height: 4.8em;
-  background-color: white;
+  background-color: #FFFFFF;
   border: black;
   padding: 0;
 }

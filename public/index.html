@@ -17,7 +17,7 @@
         <!-- EN-TÊTE -->
         <header>
             <div id="sticky-header">
-                <button id="header__btn"><a href="index.html"><i class="fas fa-arrow-left"></i></a></button>
+                <form action="index.html"><button id="header__btn" type="submit"><i class="fas fa-arrow-left"></i></button></form>
                 <p id="header__heading">ohmyfood</p>
             </div>
         </header>
@@ -34,7 +34,7 @@
             </div>
             <form method="POST" action="#">
                 <i class="fas fa-map-marker-alt"></i>
-                <input type="text" name="localisation" placeholder="Ex : Paris, Belleville" id="block-input" />
+                <input type="text" name="localisation" placeholder="Ex : Paris, Belleville" />
             </form>
 
         </section>
@@ -83,15 +83,15 @@
         <footer>
 
             <div class="container">
-                <div><img src="images/logo/ohmyfood.png" alt="ohmyfood" /></div>
+                <p>ohmyfood</p>
                 <ul>
-                    <li><a href="#">
-                        <i class="fas fa-utensils"></i>
-                        <div>Proposer un restaurant</div>
+                    <li><a href="#" class="footer-flex">
+                        <div class="footer-flex-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="footer-flex-desc">Proposer un restaurant</div>
                     </a></li>
-                    <li><a href="#">
-                        <i class="fas fa-hands-helping"></i>
-                        <div>Devenir partenaire</div>
+                    <li><a href="#" class="footer-flex">
+                        <div class="footer-flex-icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="footer-flex-desc">Devenir partenaire</div>
                     </a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="mailto:prénom.nom@gmail.com">Contact</a></li>

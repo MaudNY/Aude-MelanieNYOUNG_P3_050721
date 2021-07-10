@@ -28,7 +28,6 @@ header, h3 {
 
 a, ul {
 	text-decoration-line: none;
-	color: black;
 }
 
 /* UTILS - 1 Les variables*/
@@ -37,9 +36,11 @@ a, ul {
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-$bg-colour-primary: white;
+$bg-colour-primary: #FFFFFF;
 $bg-colour-secondary: #F6F6F6;
 $bg-colour-tertiary: #EAEAEA;
+$bg-colour-quaternary: #353535;
+$footer-font-colour: #FFFFFF;
 
 /* Mensurations */
 $container-margin: 1.25em;
@@ -52,8 +53,50 @@ $sticky: sticky;
 /* UTILS - 2 Les fonctions */
 
 /* UTILS - 3 Les mixins */
+@mixin weblink-rules ($colour) {
+	text-decoration-line: none;
+	color: $colour;
+}
+
+@mixin header-layout {
+	box-shadow: 1.5px 1.5px 5px #cac9c9;
+	z-index: 9999;
+}
+
+@mixin header-heading-layout {
+	font-size: map-get($font-size, header-heading);
+	flex: 1;
+	margin-top: nth($header__heading-margin, 1);
+	margin-bottom: nth($header__heading-margin, 2);
+	padding-left: 1.65em;
+}
+
+@mixin header-form {
+	background-color: $bg-colour-tertiary;
+	text-align: center;
+}
+
+@mixin header-form-input {
+	height: map-get($block-size, input-height);
+	font-size: map-get($font-size, form-input);
+	font-weight: bold;
+	text-align: center;
+	background-color: $bg-colour-tertiary;
+	border: none;
+	outline: none;
+}
+
 @mixin light-input-placeholder {
-	font-weight: normal;
+	font-weight: lighter;
+	color: #a8a8a8;
+}
+
+@mixin footer-flex-icon {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 0.75em;
+	height: 1em;
+	text-align: center;
 }
 
 /* LAYOUTS */
@@ -62,17 +105,12 @@ $sticky: sticky;
 }
 
 header {
-	box-shadow: 1.5px 1.5px 5px #cac9c9;
-	z-index: 9999;
+	@include header-layout;
 	#sticky-header {
 		display: flex;
 		flex-direction: row;
 		#header__heading {
-			font-size: map-get($font-size, header-heading);
-			flex: 1;
-			margin-top: nth($header__heading-margin, 1);
-			margin-bottom: nth($header__heading-margin, 2);
-			padding-left: 1.65em;
+			@include header-heading-layout;
 		}
 	}
 }
@@ -83,24 +121,40 @@ header {
 }
 
 form {
-	background-color: $bg-colour-tertiary;
-	text-align: center;
+	@include header-form;
+	input {
+		@include header-form-input;
+		&::placeholder {
+			@include light-input-placeholder;
+		}
+	}
 }
 
-#block-input {
-	height: map-get($block-size, input-height);
-	font-size: map-get($font-size, form-input);
-	font-weight: bold;
-	text-align: center;
-	background-color: $bg-colour-tertiary;
-	border: none;
-	outline: none;
+footer {
+	background-color: $bg-colour-quaternary;
+	color: $footer-font-colour;
+	ul {
+		padding: 0;
+	}
+	ul > li {
+		list-style-type: none;
+		a {
+			@include weblink-rules(#FFFFFF);
+		}
+	}
+	ul .footer-flex {
+		display: flex;
+		flex-direction: row;
+		.footer-flex-icon {
+			@include footer-flex-icon;
+		}
+		.footer-flex-desc {
+			flex: 1;
+			padding-left: 1em;
+		}
+	}
 }
 
-input::placeholder {
-	font-weight: lighter;
-	color: #a8a8a8;
-}
 
 /* COMPONENTS */
 

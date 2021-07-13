@@ -6,7 +6,7 @@
 	src: url(police-roboto/Roboto-Regular-webfont.ttf), url(police-roboto/Roboto-Regular-webfont.eot), url(police-roboto/Roboto-Regular-webfont.svg), url(police-roboto/Roboto-Regular-webfont.woff);
 }
 
-/* Police des titres "Nom de restaurant" du site ohmyfood */
+/* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
 @font-face {
 	font-family: 'Shrikhand';
 	src: url(police-shrikhand/Shrikhand-Regular.otf);
@@ -45,10 +45,8 @@ $footer-font-colour: #FFFFFF;
 /* Mensurations */
 $container-margin: 1.25em;
 $block-size: (header-btn-size: 4.8em, input-height: 3em);
-$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em);
+$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em, footer-heading: 1.15em);
 $header__heading-margin: 0.6em, 0.4em;
-
-$sticky: sticky;
 
 /* UTILS - 2 Les fonctions */
 
@@ -91,12 +89,10 @@ $sticky: sticky;
 	color: #a8a8a8;
 }
 
-@mixin footer-flex-icon {
-	display: table-cell;
+@mixin footer-icon {
 	vertical-align: middle;
+	text-align: left;
 	font-size: 0.75em;
-	height: 1em;
-	text-align: center;
 }
 
 /* LAYOUTS */
@@ -133,26 +129,29 @@ form {
 footer {
 	background-color: $bg-colour-quaternary;
 	color: $footer-font-colour;
+	p {
+		font-family: Shrikhand, serif, Arial;
+		font-size: map-get($font-size, footer-heading);
+		margin: 0;
+		padding: 1.25em 0 0.9em 0;
+	}
 	ul {
-		padding: 0;
+		margin: 0;
+		padding: 0 0 1.85em 0;
 	}
 	ul > li {
 		list-style-type: none;
+		padding-bottom: 0.15em;
 		a {
 			@include weblink-rules(#FFFFFF);
 		}
 	}
-	ul .footer-flex {
-		display: flex;
-		flex-direction: row;
-		.footer-flex-icon {
-			@include footer-flex-icon;
-		}
-		.footer-flex-desc {
-			flex: 1;
-			padding-left: 1em;
-		}
+	ul td {
+		min-width: 20px;
 	}
+	ul .footer-icon {
+		@include footer-icon;
+		}
 }
 
 

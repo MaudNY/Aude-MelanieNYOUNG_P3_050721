@@ -127,6 +127,17 @@ header {
 	flex-direction: column-reverse;
 }
 
+#block-explorer {
+	background-color: $bg-colour-secondary;
+	text-align: center;
+	h1 {
+		margin: 1.5em 0 0.25em 0;
+	}
+	p {
+		margin: 0 0 2em 0;
+	}
+}
+
 #form-block-expl {
 	@include explorer-form;
 	input {
@@ -137,14 +148,10 @@ header {
 	}
 }
 
-#block-explorer {
-	background-color: $bg-colour-secondary;
-	text-align: center;
+#running-section {
+	background-color: $bg-colour-primary;
 	h1 {
-		margin: 1.5em 0 0.25em 0;
-	}
-	p {
-		margin: 0 0 2em 0;
+		margin: 1.75em 0 2em 0;
 	}
 }
 
@@ -193,6 +200,48 @@ footer {
 
 .navigation-btn {
 	@include navigation-btn;
+}
+
+.flex-running-box {
+	display: flex;
+	flex-direction: row;
+	.running-number {
+		color: $font-colour-secondary;
+		background-color: $colour-primary;
+		height: 1em;
+		border: none;
+		border-radius: 100px;
+		display: table;
+		& span {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	.block-action {
+		display: flex;
+		flex-direction: row;
+		background-color: $bg-colour-secondary;
+		border-radius: 20px;
+		padding: 1.5em 0 1.5em 1.65em;
+		flex: 1;
+		.icon-action {
+			display: table;
+			vertical-align: middle;
+			font-size: 1.25em;
+			color: #7d7d7d;
+		}
+		.action-type {
+			display: table;
+			vertical-align: middle;
+			flex: 1;
+			padding-left: 1.65em;
+			& span {
+				display: table-cell;
+				vertical-align: middle;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 /* PAGES */

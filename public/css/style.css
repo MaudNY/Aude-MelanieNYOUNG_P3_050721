@@ -59,6 +59,17 @@ header #sticky-header #header__heading {
   flex-direction: column-reverse;
 }
 
+#block-explorer {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+#block-explorer h1 {
+  margin: 1.5em 0 0.25em 0;
+}
+#block-explorer p {
+  margin: 0 0 2em 0;
+}
+
 #form-block-expl {
   background-color: #EAEAEA;
   text-align: center;
@@ -77,15 +88,11 @@ header #sticky-header #header__heading {
   color: #a8a8a8;
 }
 
-#block-explorer {
-  background-color: #F6F6F6;
-  text-align: center;
+#running-section {
+  background-color: #FFFFFF;
 }
-#block-explorer h1 {
-  margin: 1.5em 0 0.25em 0;
-}
-#block-explorer p {
-  margin: 0 0 2em 0;
+#running-section h1 {
+  margin: 1.75em 0 2em 0;
 }
 
 footer {
@@ -140,6 +147,48 @@ footer ul .footer-icon {
   border: none;
   border-radius: 25px;
   margin-bottom: 3.25em;
+}
+
+.flex-running-box {
+  display: flex;
+  flex-direction: row;
+}
+.flex-running-box .running-number {
+  color: #FFFFFF;
+  background-color: #9356DC;
+  height: 1em;
+  border: none;
+  border-radius: 100px;
+  display: table;
+}
+.flex-running-box .running-number span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.flex-running-box .block-action {
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 1.5em 0 1.5em 1.65em;
+  flex: 1;
+}
+.flex-running-box .block-action .icon-action {
+  display: table;
+  vertical-align: middle;
+  font-size: 1.25em;
+  color: #7d7d7d;
+}
+.flex-running-box .block-action .action-type {
+  display: table;
+  vertical-align: middle;
+  flex: 1;
+  padding-left: 1.65em;
+}
+.flex-running-box .block-action .action-type span {
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
 /* PAGES */

@@ -59,11 +59,11 @@ header #sticky-header #header__heading {
   flex-direction: column-reverse;
 }
 
-form {
+#form-block-expl {
   background-color: #EAEAEA;
   text-align: center;
 }
-form input {
+#form-block-expl input {
   height: 3em;
   font-size: 1em;
   font-weight: bold;
@@ -72,9 +72,20 @@ form input {
   border: none;
   outline: none;
 }
-form input::placeholder {
+#form-block-expl input::placeholder {
   font-weight: lighter;
   color: #a8a8a8;
+}
+
+#block-explorer {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+#block-explorer h1 {
+  margin: 1.5em 0 0.25em 0;
+}
+#block-explorer p {
+  margin: 0 0 2em 0;
 }
 
 footer {
@@ -119,6 +130,16 @@ footer ul .footer-icon {
 #header__btn i {
   font-size: 1.75em;
   font-weight: bold;
+}
+
+.navigation-btn {
+  background-color: #9356DC;
+  font-size: 1em;
+  color: #FFFFFF;
+  padding: 1em;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 3.25em;
 }
 
 /* PAGES */

@@ -17,7 +17,7 @@
         <!-- EN-TÊTE -->
         <header>
             <div id="sticky-header">
-                <form action="index.html"><button id="header__btn" type="submit"><i class="fas fa-arrow-left"></i></button></form>
+                <form action="index.html" class="header__btn-form"><button id="header__btn" type="submit"><i class="fas fa-arrow-left"></i></button></form>
                 <p id="header__heading">ohmyfood</p>
             </div>
         </header>
@@ -29,10 +29,10 @@
                 <div class="container">
                     <h1>Réservez le menu qui vous convient</h1>
                     <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button>Explorer nos restaurants</button>
+                    <form action="#" id="form-navigation-btn"><button class="navigation-btn">Explorer nos restaurants</button></form>
                 </div>
             </div>
-            <form method="POST" action="#">
+            <form method="POST" action="#" id="form-block-expl">
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="text" name="localisation" placeholder="Ex : Paris, Belleville" />
             </form>

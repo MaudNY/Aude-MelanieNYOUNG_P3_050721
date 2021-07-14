@@ -40,13 +40,14 @@ $bg-colour-primary: #FFFFFF;
 $bg-colour-secondary: #F6F6F6;
 $bg-colour-tertiary: #EAEAEA;
 $bg-colour-quaternary: #353535;
-$footer-font-colour: #FFFFFF;
+$font-colour-secondary: #FFFFFF;
 
 /* Mensurations */
 $container-margin: 1.25em;
 $block-size: (header-btn-size: 4.8em, input-height: 3em);
-$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em, footer-heading: 1.15em);
+$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em, navigation-btn: 1em, footer-heading: 1.15em);
 $header__heading-margin: 0.6em, 0.4em;
+$navigation-btn-padding: 1em;
 
 /* UTILS - 2 Les fonctions */
 
@@ -69,12 +70,12 @@ $header__heading-margin: 0.6em, 0.4em;
 	padding-left: 1.65em;
 }
 
-@mixin header-form {
+@mixin explorer-form {
 	background-color: $bg-colour-tertiary;
 	text-align: center;
 }
 
-@mixin header-form-input {
+@mixin explorer-form-input {
 	height: map-get($block-size, input-height);
 	font-size: map-get($font-size, form-input);
 	font-weight: bold;
@@ -87,6 +88,16 @@ $header__heading-margin: 0.6em, 0.4em;
 @mixin light-input-placeholder {
 	font-weight: lighter;
 	color: #a8a8a8;
+}
+
+@mixin navigation-btn {
+	background-color: $colour-primary;
+	font-size: map-get($font-size, navigation-btn);
+	color: $font-colour-secondary;
+	padding: $navigation-btn-padding;
+	border: none;
+	border-radius: 25px;
+	margin-bottom: 3.25em;
 }
 
 @mixin footer-icon {
@@ -116,19 +127,30 @@ header {
 	flex-direction: column-reverse;
 }
 
-form {
-	@include header-form;
+#form-block-expl {
+	@include explorer-form;
 	input {
-		@include header-form-input;
+		@include explorer-form-input;
 		&::placeholder {
 			@include light-input-placeholder;
 		}
 	}
 }
 
+#block-explorer {
+	background-color: $bg-colour-secondary;
+	text-align: center;
+	h1 {
+		margin: 1.5em 0 0.25em 0;
+	}
+	p {
+		margin: 0 0 2em 0;
+	}
+}
+
 footer {
 	background-color: $bg-colour-quaternary;
-	color: $footer-font-colour;
+	color: $font-colour-secondary;
 	p {
 		font-family: Shrikhand, serif, Arial;
 		font-size: map-get($font-size, footer-heading);
@@ -167,6 +189,10 @@ footer {
 		font-size: map-get($font-size, header-btn-icon);
 		font-weight: bold;
 	}
+}
+
+.navigation-btn {
+	@include navigation-btn;
 }
 
 /* PAGES */

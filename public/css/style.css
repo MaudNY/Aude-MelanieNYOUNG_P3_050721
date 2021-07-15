@@ -3,12 +3,12 @@
 /* Police générique du site ohmyfood */
 @font-face {
   font-family: "Roboto";
-  src: url(police-roboto/Roboto-Regular-webfont.ttf), url(police-roboto/Roboto-Regular-webfont.eot), url(police-roboto/Roboto-Regular-webfont.svg), url(police-roboto/Roboto-Regular-webfont.woff);
+  src: url(public/font/police-roboto/Roboto-Regular-webfont.woff), url(public/font/police-roboto/Roboto-Regular-webfont.ttf), url(public/font/police-roboto/Roboto-Regular-webfont.eot), url(publicfont/police-roboto/Roboto-Regular-webfont.svg);
 }
 /* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
 @font-face {
   font-family: "Shrikhand";
-  src: url(police-shrikhand/Shrikhand-Regular.otf);
+  src: url(public/font/police-shrikhand/Shrikhand-Regular.otf);
 }
 /* Éléments génériques du site */
 body {
@@ -17,11 +17,11 @@ body {
 }
 
 header, h3 {
-  font-family: Shrikhand, serif, Arial;
+  font-family: Shrikhand, sans-serif;
 }
 
 .container, input {
-  font-family: Roboto, serif, Arial;
+  font-family: Roboto, sans-serif;
 }
 
 a, ul {
@@ -93,7 +93,7 @@ header #sticky-header #header__heading {
 }
 #running-section h1 {
   margin: 1.75em 0 0 0;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 footer {
@@ -152,9 +152,21 @@ footer ul .footer-icon {
 .flex-running-box {
   display: flex;
   flex-direction: row;
+  background-color: #F6F6F6;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  padding: 1.5em 0 1.5em 0;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+  position: relative;
 }
 .flex-running-box .running-number {
   display: table;
+  width: 1.45em;
+  position: absolute;
+  left: -10px;
 }
 .flex-running-box .running-number span {
   display: table-cell;
@@ -162,37 +174,33 @@ footer ul .footer-icon {
   text-align: center;
   color: #FFFFFF;
   background-color: #9356DC;
-  height: 1em;
   margin: 1em 0 1em 0;
   border: none;
   border-radius: 100px;
 }
-.flex-running-box .block-action {
-  display: flex;
-  flex-direction: row;
-  background-color: #F6F6F6;
-  padding: 1.5em 0 1.5em 0;
-  border-radius: 20px;
-  box-shadow: 0.5px 0.5px 10px #c9c9c9;
-  flex: 1;
-}
-.flex-running-box .block-action .icon-action {
+.flex-running-box .icon-action {
   display: table;
   vertical-align: middle;
   text-align: center;
-  width: 25%;
+  width: 28%;
   font-size: 1.25em;
   color: #7d7d7d;
 }
-.flex-running-box .block-action .action-type {
+.flex-running-box .action-type {
   display: table;
   vertical-align: middle;
   flex: 1;
 }
-.flex-running-box .block-action .action-type span {
+.flex-running-box .action-type span {
   display: table-cell;
   vertical-align: middle;
   font-weight: bold;
+}
+.flex-running-box:hover {
+  background-color: #F5EDFF;
+}
+.flex-running-box:hover .icon-action {
+  color: #9356DC;
 }
 
 /* PAGES */

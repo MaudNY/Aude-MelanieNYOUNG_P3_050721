@@ -3,13 +3,13 @@
 /* Police générique du site ohmyfood */
 @font-face {
 	font-family: 'Roboto';
-	src: url(police-roboto/Roboto-Regular-webfont.ttf), url(police-roboto/Roboto-Regular-webfont.eot), url(police-roboto/Roboto-Regular-webfont.svg), url(police-roboto/Roboto-Regular-webfont.woff);
+	src: url(public/font/police-roboto/Roboto-Regular-webfont.woff), url(public/font/police-roboto/Roboto-Regular-webfont.ttf), url(public/font/police-roboto/Roboto-Regular-webfont.eot), url(publicfont/police-roboto/Roboto-Regular-webfont.svg);
 }
 
 /* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
 @font-face {
 	font-family: 'Shrikhand';
-	src: url(police-shrikhand/Shrikhand-Regular.otf);
+	src: url(public/font/police-shrikhand/Shrikhand-Regular.otf);
 }
 
 /* Éléments génériques du site */
@@ -19,11 +19,11 @@ body {
 }
 
 header, h3 {
-	font-family: Shrikhand, serif, Arial;
+	font-family: Shrikhand, sans-serif;
 }
 
 .container, input {
-	font-family: Roboto, serif, Arial;
+	font-family: Roboto, sans-serif;
 }
 
 a, ul {
@@ -50,6 +50,12 @@ $header__heading-margin: 0.6em, 0.4em;
 $navigation-btn-padding: 1em;
 
 /* UTILS - 2 Les fonctions */
+@function hover-shift ($colour) {
+	@if (lightness ($colour) >= 50%) {
+		@return saturate($colour, 34%);
+		@return lighten($colour, 36%);
+	}
+}
 
 /* UTILS - 3 Les mixins */
 @mixin weblink-rules ($colour) {
@@ -152,7 +158,7 @@ header {
 	background-color: $bg-colour-primary;
 	h1 {
 		margin: 1.75em 0 0 0;
-		padding-bottom: 2em;
+		padding-bottom: 1em;
 	}
 }
 
@@ -205,45 +211,53 @@ footer {
 .flex-running-box {
 	display: flex;
 	flex-direction: row;
+	background-color: $bg-colour-secondary;
+	width: 20em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	padding: 1.5em 0 1.5em 0;
+	border-radius: 20px;
+	box-shadow: 0.5px 0.5px 10px #c9c9c9;
+	position: relative;
 	.running-number {
 		display: table;
+		width: 1.45em;
+		position: absolute;
+		left : -10px;
 		& span {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
 			color: $font-colour-secondary;
 			background-color: $colour-primary;
-			height: 1em;
 			margin: 1em 0 1em 0;
 			border: none;
 			border-radius: 100px;
 		}
 	}
-	.block-action {
-		display: flex;
-		flex-direction: row;
-		background-color: $bg-colour-secondary;
-		padding: 1.5em 0 1.5em 0;
-		border-radius: 20px;
-		box-shadow: 0.5px 0.5px 10px #c9c9c9;
+	.icon-action {
+		display: table;
+		vertical-align: middle;
+		text-align: center;
+		width: 28%;
+		font-size: 1.25em;
+		color: #7d7d7d;
+	}
+	.action-type {
+		display: table;
+		vertical-align: middle;
 		flex: 1;
-		.icon-action {
-			display: table;
+		& span {
+			display: table-cell;
 			vertical-align: middle;
-			text-align: center;
-			width: 25%;
-			font-size: 1.25em;
-			color: #7d7d7d;
+			font-weight: bold;
 		}
-		.action-type {
-			display: table;
-			vertical-align: middle;
-			flex: 1;
-			& span {
-				display: table-cell;
-				vertical-align: middle;
-				font-weight: bold;
-			}
+	}
+	&:hover {
+		background-color: #F5EDFF;
+		& .icon-action {
+			color: $colour-primary;
 		}
 	}
 }

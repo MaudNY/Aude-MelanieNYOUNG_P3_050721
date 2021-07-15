@@ -47,63 +47,13 @@ $container-margin: 1.25em;
 $block-size: (header-btn-size: 4.8em, input-height: 3em);
 $font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em, navigation-btn: 1em, footer-heading: 1.15em);
 $header__heading-margin: 0.6em, 0.4em;
-$navigation-btn-padding: 1em;
 
 /* UTILS - 2 Les fonctions */
-@function hover-shift ($colour) {
-	@if (lightness ($colour) >= 50%) {
-		@return saturate($colour, 34%);
-		@return lighten($colour, 36%);
-	}
-}
 
 /* UTILS - 3 Les mixins */
 @mixin weblink-rules ($colour) {
 	text-decoration-line: none;
 	color: $colour;
-}
-
-@mixin header-layout {
-	box-shadow: 1.5px 1.5px 5px #a8a8a8;
-	z-index: 9999;
-}
-
-@mixin header-heading-layout {
-	font-size: map-get($font-size, header-heading);
-	flex: 1;
-	margin-top: nth($header__heading-margin, 1);
-	margin-bottom: nth($header__heading-margin, 2);
-	padding-left: 1.65em;
-}
-
-@mixin explorer-form {
-	background-color: $bg-colour-tertiary;
-	text-align: center;
-}
-
-@mixin explorer-form-input {
-	height: map-get($block-size, input-height);
-	font-size: map-get($font-size, form-input);
-	font-weight: bold;
-	text-align: center;
-	background-color: $bg-colour-tertiary;
-	border: none;
-	outline: none;
-}
-
-@mixin light-input-placeholder {
-	font-weight: lighter;
-	color: #a8a8a8;
-}
-
-@mixin navigation-btn {
-	background-color: $colour-primary;
-	font-size: map-get($font-size, navigation-btn);
-	color: $font-colour-secondary;
-	padding: $navigation-btn-padding;
-	border: none;
-	border-radius: 25px;
-	margin-bottom: 3.25em;
 }
 
 @mixin footer-icon {
@@ -118,12 +68,17 @@ $navigation-btn-padding: 1em;
 }
 
 header {
-	@include header-layout;
+	box-shadow: 1.5px 1.5px 5px #a8a8a8;
+	z-index: 9999;
 	#sticky-header {
 		display: flex;
 		flex-direction: row;
-		#header__heading {
-			@include header-heading-layout;
+		#header-logo {
+			flex: 1;
+			padding: 1.4em 0 0 3.75em;
+			& img {
+				max-width: 55%;
+			}
 		}
 	}
 }
@@ -137,19 +92,29 @@ header {
 	background-color: $bg-colour-secondary;
 	text-align: center;
 	h1 {
-		margin: 1.5em 0 0.25em 0;
+		margin: 1.6em 0 0.5em 0;
 	}
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1.6em 0;
+		font-size: 1.15em;
+		font-weight: lighter;
 	}
 }
 
 #form-block-expl {
-	@include explorer-form;
+	background-color: $bg-colour-tertiary;
+	text-align: center;
 	input {
-		@include explorer-form-input;
+		height: map-get($block-size, input-height);
+		font-size: map-get($font-size, form-input);
+		font-weight: bold;
+		text-align: center;
+		background-color: $bg-colour-tertiary;
+		border: none;
+		outline: none;
 		&::placeholder {
-			@include light-input-placeholder;
+			font-weight: lighter;
+			color: #a8a8a8;
 		}
 	}
 }
@@ -157,8 +122,8 @@ header {
 #running-section {
 	background-color: $bg-colour-primary;
 	h1 {
-		margin: 1.75em 0 0 0;
-		padding-bottom: 1em;
+		margin: 2em 0 0 0;
+		padding-bottom: 1.25em;
 	}
 }
 
@@ -193,11 +158,13 @@ footer {
 /* COMPONENTS */
 
 #header__btn {
+	display: block;
 	width: map-get($block-size, header-btn-size);
 	height: map-get($block-size, header-btn-size);
 	background-color: $bg-colour-primary;
 	border: black;
 	padding: 0;
+	@include weblink-rules (#000000);
 	i {
 		font-size: map-get($font-size, header-btn-icon);
 		font-weight: bold;
@@ -205,13 +172,25 @@ footer {
 }
 
 .navigation-btn {
-	@include navigation-btn;
+	display: block;
+	background-color: $colour-primary;
+	font-size: map-get($font-size, navigation-btn);
+	color: $font-colour-secondary;
+	width: 13em;
+	text-align: center;
+	padding: 1em 0 1em 0;
+	border: none;
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3.5em;
 }
 
 .flex-running-box {
 	display: flex;
 	flex-direction: row;
 	background-color: $bg-colour-secondary;
+	font-family: Roboto, sans-serif;
 	width: 20em;
 	margin-left: auto;
 	margin-right: auto;
@@ -222,13 +201,16 @@ footer {
 	position: relative;
 	.running-number {
 		display: table;
-		width: 1.45em;
+		width: 25px;
+		height: 25px;
 		position: absolute;
+		top: 20px;
 		left : -10px;
 		& span {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+			font-size: 0.95em;
 			color: $font-colour-secondary;
 			background-color: $colour-primary;
 			margin: 1em 0 1em 0;
@@ -238,11 +220,14 @@ footer {
 	}
 	.icon-action {
 		display: table;
-		vertical-align: middle;
 		text-align: center;
 		width: 28%;
 		font-size: 1.25em;
 		color: #7d7d7d;
+		& .fas {
+			display: table-cell;
+			vertical-align: middle;
+		}
 	}
 	.action-type {
 		display: table;

@@ -56,12 +56,6 @@ $header__heading-margin: 0.6em, 0.4em;
 	color: $colour;
 }
 
-@mixin footer-icon {
-	vertical-align: middle;
-	text-align: left;
-	font-size: 0.75em;
-}
-
 /* LAYOUTS */
 .container {
 	margin: 0 $container-margin;
@@ -121,10 +115,15 @@ header {
 
 #running-section {
 	background-color: $bg-colour-primary;
+	margin-bottom: 4.25em;
 	h1 {
 		margin: 2em 0 0 0;
 		padding-bottom: 1.25em;
 	}
+}
+
+#restaurants-section {
+	background-color: $bg-colour-secondary;
 }
 
 footer {
@@ -134,11 +133,11 @@ footer {
 		font-family: Shrikhand, serif, Arial;
 		font-size: map-get($font-size, footer-heading);
 		margin: 0;
-		padding: 1.25em 0 0.9em 0;
+		padding: 1.25em 0 0.65em 0;
 	}
 	ul {
 		margin: 0;
-		padding: 0 0 1.85em 0;
+		padding: 0 0 2em 0;
 	}
 	ul > li {
 		list-style-type: none;
@@ -148,39 +147,46 @@ footer {
 	}
 	ul td {
 		min-width: 20px;
+		height: 1.25em;
 	}
 	ul .footer-icon {
-		@include footer-icon;
+		vertical-align: middle;
+		text-align: left;
+		font-size: 0.75em;
 		}
 }
 
 
 /* COMPONENTS */
 
-#header__btn {
-	display: block;
+header a {
+	display: table;
 	width: map-get($block-size, header-btn-size);
 	height: map-get($block-size, header-btn-size);
 	background-color: $bg-colour-primary;
 	border: black;
 	padding: 0;
 	@include weblink-rules (#000000);
-	i {
+	.fas {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
 		font-size: map-get($font-size, header-btn-icon);
 		font-weight: bold;
 	}
 }
 
-.navigation-btn {
+.navigation__btn {
 	display: block;
-	background-color: $colour-primary;
 	font-size: map-get($font-size, navigation-btn);
 	color: $font-colour-secondary;
+	background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
 	width: 13em;
 	text-align: center;
 	padding: 1em 0 1em 0;
 	border: none;
 	border-radius: 25px;
+	box-shadow: 1px 1px 5px #7a7a7a;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3.5em;
@@ -195,7 +201,7 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
-	padding: 1.5em 0 1.5em 0;
+	padding: 1.65em 0 1.65em 0;
 	border-radius: 20px;
 	box-shadow: 0.5px 0.5px 10px #c9c9c9;
 	position: relative;

@@ -39,7 +39,7 @@ a, ul {
 }
 
 header {
-  box-shadow: 1.5px 1.5px 5px #cac9c9;
+  box-shadow: 1.5px 1.5px 5px #a8a8a8;
   z-index: 9999;
 }
 header #sticky-header {
@@ -92,7 +92,8 @@ header #sticky-header #header__heading {
   background-color: #FFFFFF;
 }
 #running-section h1 {
-  margin: 1.75em 0 2em 0;
+  margin: 1.75em 0 0 0;
+  padding-bottom: 2em;
 }
 
 footer {
@@ -111,7 +112,6 @@ footer ul {
 }
 footer ul > li {
   list-style-type: none;
-  padding-bottom: 0.15em;
 }
 footer ul > li a {
   text-decoration-line: none;
@@ -154,28 +154,33 @@ footer ul .footer-icon {
   flex-direction: row;
 }
 .flex-running-box .running-number {
-  color: #FFFFFF;
-  background-color: #9356DC;
-  height: 1em;
-  border: none;
-  border-radius: 100px;
   display: table;
 }
 .flex-running-box .running-number span {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  height: 1em;
+  margin: 1em 0 1em 0;
+  border: none;
+  border-radius: 100px;
 }
 .flex-running-box .block-action {
   display: flex;
   flex-direction: row;
   background-color: #F6F6F6;
+  padding: 1.5em 0 1.5em 0;
   border-radius: 20px;
-  padding: 1.5em 0 1.5em 1.65em;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
   flex: 1;
 }
 .flex-running-box .block-action .icon-action {
   display: table;
   vertical-align: middle;
+  text-align: center;
+  width: 25%;
   font-size: 1.25em;
   color: #7d7d7d;
 }
@@ -183,7 +188,6 @@ footer ul .footer-icon {
   display: table;
   vertical-align: middle;
   flex: 1;
-  padding-left: 1.65em;
 }
 .flex-running-box .block-action .action-type span {
   display: table-cell;

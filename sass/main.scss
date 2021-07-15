@@ -58,7 +58,7 @@ $navigation-btn-padding: 1em;
 }
 
 @mixin header-layout {
-	box-shadow: 1.5px 1.5px 5px #cac9c9;
+	box-shadow: 1.5px 1.5px 5px #a8a8a8;
 	z-index: 9999;
 }
 
@@ -151,7 +151,8 @@ header {
 #running-section {
 	background-color: $bg-colour-primary;
 	h1 {
-		margin: 1.75em 0 2em 0;
+		margin: 1.75em 0 0 0;
+		padding-bottom: 2em;
 	}
 }
 
@@ -170,7 +171,6 @@ footer {
 	}
 	ul > li {
 		list-style-type: none;
-		padding-bottom: 0.15em;
 		a {
 			@include weblink-rules(#FFFFFF);
 		}
@@ -206,27 +206,32 @@ footer {
 	display: flex;
 	flex-direction: row;
 	.running-number {
-		color: $font-colour-secondary;
-		background-color: $colour-primary;
-		height: 1em;
-		border: none;
-		border-radius: 100px;
 		display: table;
 		& span {
 			display: table-cell;
 			vertical-align: middle;
+			text-align: center;
+			color: $font-colour-secondary;
+			background-color: $colour-primary;
+			height: 1em;
+			margin: 1em 0 1em 0;
+			border: none;
+			border-radius: 100px;
 		}
 	}
 	.block-action {
 		display: flex;
 		flex-direction: row;
 		background-color: $bg-colour-secondary;
+		padding: 1.5em 0 1.5em 0;
 		border-radius: 20px;
-		padding: 1.5em 0 1.5em 1.65em;
+		box-shadow: 0.5px 0.5px 10px #c9c9c9;
 		flex: 1;
 		.icon-action {
 			display: table;
 			vertical-align: middle;
+			text-align: center;
+			width: 25%;
 			font-size: 1.25em;
 			color: #7d7d7d;
 		}
@@ -234,7 +239,6 @@ footer {
 			display: table;
 			vertical-align: middle;
 			flex: 1;
-			padding-left: 1.65em;
 			& span {
 				display: table-cell;
 				vertical-align: middle;

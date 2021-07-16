@@ -14,6 +14,9 @@ header a {
 		text-align: center;
 		font-size: map-get($font-size, header-btn-icon);
 		font-weight: bold;
+		&--disabled {
+			display: none;
+		}
 	}
 }
 
@@ -31,67 +34,6 @@ header a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3.5em;
-}
-
-.flex-running-box {
-	display: flex;
-	flex-direction: row;
-	background-color: $bg-colour-secondary;
-	font-family: Roboto, sans-serif;
-	width: 20em;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1.5em;
-	padding: 1.65em 0 1.65em 0;
-	border-radius: 20px;
-	position: relative;
-	@include basic-box-shadow;
-	.running-number {
-		display: table;
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		top: 20px;
-		left : -10px;
-		& span {
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-			font-size: 0.95em;
-			color: $font-colour-secondary;
-			background-color: $colour-primary;
-			margin: 1em 0 1em 0;
-			border: none;
-			border-radius: 100px;
-		}
-	}
-	.icon-action {
-		display: table;
-		text-align: center;
-		width: 28%;
-		font-size: 1.25em;
-		color: #7d7d7d;
-		& .fas {
-			display: table-cell;
-			vertical-align: middle;
-		}
-	}
-	.action-type {
-		display: table;
-		vertical-align: middle;
-		flex: 1;
-		& span {
-			display: table-cell;
-			vertical-align: middle;
-			font-weight: bold;
-		}
-	}
-	&:hover {
-		background-color: #F5EDFF;
-		& .icon-action {
-			color: $colour-primary;
-		}
-	}
 }
 
 .thumbnail-new {

@@ -34,12 +34,12 @@ a, ul {
 /* Police générique du site ohmyfood */
 @font-face {
   font-family: "Roboto";
-  src: url(public/font/police-roboto/Roboto-Regular-webfont.woff), url(public/font/police-roboto/Roboto-Regular-webfont.ttf), url(public/font/police-roboto/Roboto-Regular-webfont.eot), url(publicfont/police-roboto/Roboto-Regular-webfont.svg);
+  src: url(./font/police-roboto/Roboto-Regular-webfont.woff), url(./font/police-roboto/Roboto-Regular-webfont.ttf), url(./font/police-roboto/Roboto-Regular-webfont.eot), url(./font/police-roboto/Roboto-Regular-webfont.svg);
 }
 /* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
 @font-face {
   font-family: "Shrikhand";
-  src: url(public/font/police-shrikhand/Shrikhand-Regular.otf);
+  src: url(./font/police-shrikhand/Shrikhand-Regular.otf);
 }
 /* COMPONENTS */
 header a {
@@ -59,6 +59,9 @@ header a .fas {
   font-size: 1.75em;
   font-weight: bold;
 }
+header a .fas--disabled {
+  display: none;
+}
 
 .navigation__btn {
   display: block;
@@ -74,6 +77,66 @@ header a .fas {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3.5em;
+}
+
+.thumbnail-new {
+  display: block;
+  width: 4.25em;
+  color: #0d8f70;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #99E2D0;
+  border-radius: 2.5px;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  position: absolute;
+  right: 0.75em;
+  top: 1em;
+  text-decoration-line: none;
+  color: #0d8f70;
+}
+.thumbnail-new--disabled {
+  display: none;
+}
+
+/* CONTAINER */
+.container {
+  margin: 0 1.25em;
+}
+
+/* HEADER */
+header {
+  box-shadow: 1.5px 1.5px 5px #a8a8a8;
+  z-index: 9999;
+}
+header #sticky-header {
+  display: flex;
+  flex-direction: row;
+}
+header #sticky-header #header-logo {
+  flex: 1;
+  padding: 1.4em 0 0 3.75em;
+}
+header #sticky-header #header-logo img {
+  max-width: 55%;
+}
+
+/* BLOCKS */
+#block-loc {
+  background-color: #EAEAEA;
+  text-align: center;
+  height: 3em;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#block-loc .block-loc-icon {
+  width: 2.5em;
 }
 
 .flex-running-box {
@@ -137,67 +200,6 @@ header a .fas {
   color: #9356DC;
 }
 
-.thumbnail-new {
-  display: block;
-  width: 4.25em;
-  color: #0d8f70;
-  font-size: 0.85em;
-  font-weight: bold;
-  text-align: center;
-  background-color: #99E2D0;
-  border-radius: 2.5px;
-  padding: 0.5em 0.75em 0.5em 0.75em;
-  position: absolute;
-  right: 0.75em;
-  top: 1em;
-  text-decoration-line: none;
-  color: #0d8f70;
-}
-.thumbnail-new--disabled {
-  display: none;
-}
-
-/* CONTAINER */
-.container {
-  margin: 0 1.25em;
-}
-
-/* HEADER */
-header {
-  box-shadow: 1.5px 1.5px 5px #a8a8a8;
-  z-index: 9999;
-}
-header #sticky-header {
-  display: flex;
-  flex-direction: row;
-}
-header #sticky-header #header-logo {
-  flex: 1;
-  padding: 1.4em 0 0 3.75em;
-}
-header #sticky-header #header-logo img {
-  max-width: 55%;
-}
-
-/* FORM */
-#form-block-expl {
-  background-color: #EAEAEA;
-  text-align: center;
-}
-#form-block-expl input {
-  height: 3em;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  background-color: #EAEAEA;
-  border: none;
-  outline: none;
-}
-#form-block-expl input::placeholder {
-  font-weight: lighter;
-  color: #a8a8a8;
-}
-
 /* SECTIONS */
 #block-research {
   display: flex;
@@ -254,18 +256,17 @@ header #sticky-header #header-logo img {
 .block-rest .block-rest-desc {
   display: flex;
   height: 4.5em;
+  align-items: center;
 }
 .block-rest .block-rest-desc .block-rest-info {
   flex: 1;
   color: black;
-  padding: 0.75em 0 0 0.75em;
+  padding-left: 0.75em;
   text-decoration-line: none;
   color: black;
 }
 .block-rest .heart-bookmark {
   width: 25%;
-  height: 3em;
-  line-height: 3em;
   font-size: 1.5em;
   text-align: center;
 }
@@ -276,7 +277,7 @@ footer {
   color: #FFFFFF;
 }
 footer p {
-  font-family: Shrikhand, serif, Arial;
+  font-family: Shrikhand, sans-serif;
   font-size: 1.15em;
   padding: 1.25em 0 0.65em 0;
 }

@@ -1,0 +1,16 @@
+/* HEADER */
+header {
+	box-shadow: 1.5px 1.5px 5px #a8a8a8;
+	z-index: 9999;
+	#sticky-header {
+		display: flex;
+		flex-direction: row;
+		#header-logo {
+			flex: 1;
+			padding: 1.4em 0 0 3.75em;
+			& img {
+				max-width: 55%;
+			}
+		}
+	}
+}

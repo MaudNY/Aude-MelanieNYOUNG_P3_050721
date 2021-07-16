@@ -1,15 +1,8 @@
 @charset "UTF-8";
-/*BASE - Fondations du site */
-/* Police générique du site ohmyfood */
-@font-face {
-  font-family: "Roboto";
-  src: url(public/font/police-roboto/Roboto-Regular-webfont.woff), url(public/font/police-roboto/Roboto-Regular-webfont.ttf), url(public/font/police-roboto/Roboto-Regular-webfont.eot), url(publicfont/police-roboto/Roboto-Regular-webfont.svg);
-}
-/* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
-@font-face {
-  font-family: "Shrikhand";
-  src: url(public/font/police-shrikhand/Shrikhand-Regular.otf);
-}
+/* UTILS - Variables*/
+/* Couleurs */
+/* Mensurations */
+/* UTILS - Mixins */
 /* Éléments génériques du site */
 body {
   box-sizing: border-box;
@@ -38,150 +31,16 @@ a, ul {
   text-decoration-line: none;
 }
 
-/* UTILS - 1 Les variables*/
-/* Couleurs */
-/* Mensurations */
-/* UTILS - 2 Les fonctions */
-/* UTILS - 3 Les mixins */
-/* LAYOUTS */
-.container {
-  margin: 0 1.25em;
+/* Police générique du site ohmyfood */
+@font-face {
+  font-family: "Roboto";
+  src: url(public/font/police-roboto/Roboto-Regular-webfont.woff), url(public/font/police-roboto/Roboto-Regular-webfont.ttf), url(public/font/police-roboto/Roboto-Regular-webfont.eot), url(publicfont/police-roboto/Roboto-Regular-webfont.svg);
 }
-
-header {
-  box-shadow: 1.5px 1.5px 5px #a8a8a8;
-  z-index: 9999;
+/* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
+@font-face {
+  font-family: "Shrikhand";
+  src: url(public/font/police-shrikhand/Shrikhand-Regular.otf);
 }
-header #sticky-header {
-  display: flex;
-  flex-direction: row;
-}
-header #sticky-header #header-logo {
-  flex: 1;
-  padding: 1.4em 0 0 3.75em;
-}
-header #sticky-header #header-logo img {
-  max-width: 55%;
-}
-
-#block-research {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-#block-explorer {
-  background-color: #F6F6F6;
-  text-align: center;
-}
-#block-explorer h1 {
-  margin: 1.6em 0 0.5em 0;
-}
-#block-explorer p {
-  margin: 0 0 1.6em 0;
-  font-size: 1.15em;
-  font-weight: lighter;
-}
-
-#form-block-expl {
-  background-color: #EAEAEA;
-  text-align: center;
-}
-#form-block-expl input {
-  height: 3em;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  background-color: #EAEAEA;
-  border: none;
-  outline: none;
-}
-#form-block-expl input::placeholder {
-  font-weight: lighter;
-  color: #a8a8a8;
-}
-
-#running-section {
-  background-color: #FFFFFF;
-  margin-bottom: 4.25em;
-}
-#running-section h1 {
-  margin: 2em 0 0 0;
-  padding-bottom: 1.25em;
-}
-
-#restaurants-section {
-  background-color: #F6F6F6;
-  padding: 3.5em 0 2.85em 0;
-}
-#restaurants-section h1 {
-  margin: 0;
-  padding: 0 0 0.85em 0;
-}
-
-.block-rest {
-  height: 15.7em;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  margin-bottom: 1.15em;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0.5px 0.5px 10px #c9c9c9;
-}
-.block-rest img {
-  min-width: 100%;
-  max-width: 100%;
-  height: 70%;
-  object-fit: cover;
-}
-.block-rest .block-rest-desc {
-  display: flex;
-  height: 4.5em;
-}
-.block-rest .block-rest-desc .block-rest-info {
-  flex: 1;
-  color: black;
-  padding: 0.75em 0 0 0.75em;
-  text-decoration-line: none;
-  color: black;
-}
-.block-rest .heart-bookmark {
-  width: 25%;
-  height: 3em;
-  line-height: 3em;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-footer {
-  background-color: #353535;
-  color: #FFFFFF;
-}
-footer p {
-  font-family: Shrikhand, serif, Arial;
-  font-size: 1.15em;
-  padding: 1.25em 0 0.65em 0;
-}
-footer ul {
-  margin: 0;
-  padding: 0 0 2em 0;
-}
-footer ul > li {
-  list-style-type: none;
-}
-footer ul > li a {
-  text-decoration-line: none;
-  color: #FFFFFF;
-}
-footer ul td {
-  min-width: 20px;
-  height: 1.25em;
-}
-footer ul .footer-icon {
-  vertical-align: middle;
-  text-align: left;
-  font-size: 0.75em;
-}
-
 /* COMPONENTS */
 header a {
   display: table;
@@ -298,6 +157,148 @@ header a .fas {
   display: none;
 }
 
-/* PAGES */
+/* CONTAINER */
+.container {
+  margin: 0 1.25em;
+}
+
+/* HEADER */
+header {
+  box-shadow: 1.5px 1.5px 5px #a8a8a8;
+  z-index: 9999;
+}
+header #sticky-header {
+  display: flex;
+  flex-direction: row;
+}
+header #sticky-header #header-logo {
+  flex: 1;
+  padding: 1.4em 0 0 3.75em;
+}
+header #sticky-header #header-logo img {
+  max-width: 55%;
+}
+
+/* FORM */
+#form-block-expl {
+  background-color: #EAEAEA;
+  text-align: center;
+}
+#form-block-expl input {
+  height: 3em;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #EAEAEA;
+  border: none;
+  outline: none;
+}
+#form-block-expl input::placeholder {
+  font-weight: lighter;
+  color: #a8a8a8;
+}
+
+/* SECTIONS */
+#block-research {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#block-explorer {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+#block-explorer h1 {
+  margin: 1.6em 0 0.5em 0;
+}
+#block-explorer p {
+  margin: 0 0 1.6em 0;
+  font-size: 1.15em;
+  font-weight: lighter;
+}
+
+#running-section {
+  background-color: #FFFFFF;
+  margin-bottom: 4.25em;
+}
+#running-section h1 {
+  margin: 2em 0 0 0;
+  padding-bottom: 1.25em;
+}
+
+#restaurants-section {
+  background-color: #F6F6F6;
+  padding: 3.5em 0 2.85em 0;
+}
+#restaurants-section h1 {
+  margin: 0;
+  padding: 0 0 0.85em 0;
+}
+
+/* RESTAURANT TILES */
+.block-rest {
+  height: 15.7em;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin-bottom: 1.15em;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}
+.block-rest img {
+  min-width: 100%;
+  max-width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.block-rest .block-rest-desc {
+  display: flex;
+  height: 4.5em;
+}
+.block-rest .block-rest-desc .block-rest-info {
+  flex: 1;
+  color: black;
+  padding: 0.75em 0 0 0.75em;
+  text-decoration-line: none;
+  color: black;
+}
+.block-rest .heart-bookmark {
+  width: 25%;
+  height: 3em;
+  line-height: 3em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+footer p {
+  font-family: Shrikhand, serif, Arial;
+  font-size: 1.15em;
+  padding: 1.25em 0 0.65em 0;
+}
+footer ul {
+  margin: 0;
+  padding: 0 0 2em 0;
+}
+footer ul > li {
+  list-style-type: none;
+}
+footer ul > li a {
+  text-decoration-line: none;
+  color: #FFFFFF;
+}
+footer ul td {
+  min-width: 20px;
+  height: 1.25em;
+}
+footer ul .footer-icon {
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0.75em;
+}
 
 /*# sourceMappingURL=main.css.map */

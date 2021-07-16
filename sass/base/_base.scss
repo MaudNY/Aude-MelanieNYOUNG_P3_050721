@@ -1,0 +1,27 @@
+/* Éléments génériques du site */
+body {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header, h3 {
+	font-family: Shrikhand, sans-serif;
+}
+
+h2 {
+	font-size: 1.15em;
+	padding-bottom: 0.25em;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.container, input {
+	font-family: Roboto, sans-serif;
+}
+
+a, ul {
+	text-decoration-line: none;
+}

@@ -1,0 +1,9 @@
+/* UTILS - Mixins */
+@mixin weblink-rules ($colour) {
+	text-decoration-line: none;
+	color: $colour;
+}
+
+@mixin basic-box-shadow {
+	box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}

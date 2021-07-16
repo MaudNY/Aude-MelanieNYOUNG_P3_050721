@@ -1,0 +1,36 @@
+/* SECTIONS */
+#block-research {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#block-explorer {
+	background-color: $bg-colour-secondary;
+	text-align: center;
+	h1 {
+		margin: 1.6em 0 0.5em 0;
+	}
+	p {
+		margin: 0 0 1.6em 0;
+		font-size: 1.15em;
+		font-weight: lighter;
+	}
+}
+
+#running-section {
+	background-color: $bg-colour-primary;
+	margin-bottom: 4.25em;
+	h1 {
+		margin: 2em 0 0 0;
+		padding-bottom: 1.25em;
+	}
+}
+
+#restaurants-section {
+	background-color: $bg-colour-secondary;
+	padding: 3.5em 0 2.85em 0;
+	h1 {
+		margin: 0;
+		padding: 0 0 0.85em 0;
+	}
+}

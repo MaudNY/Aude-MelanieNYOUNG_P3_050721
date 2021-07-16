@@ -41,6 +41,77 @@ a, ul {
   font-family: "Shrikhand";
   src: url(./font/police-shrikhand/Shrikhand-Regular.otf);
 }
+/* BLOCKS */
+#block-loc {
+  background-color: #EAEAEA;
+  text-align: center;
+  height: 3em;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#block-loc .block-loc-icon {
+  width: 2.5em;
+}
+
+.flex-running-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F6F6F6;
+  font-family: Roboto, sans-serif;
+  width: 20em;
+  height: 4.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}
+.flex-running-box .running-number {
+  display: table;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  left: -10px;
+}
+.flex-running-box .running-number span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.95em;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  margin: 1em 0 1em 0;
+  border: none;
+  border-radius: 100px;
+}
+.flex-running-box .icon-action {
+  text-align: center;
+  width: 28%;
+  font-size: 1.25em;
+  color: #7d7d7d;
+}
+.flex-running-box .action-type {
+  flex: 1;
+}
+.flex-running-box .action-type span {
+  font-weight: bold;
+}
+.flex-running-box:hover {
+  background-color: #F5EDFF;
+}
+.flex-running-box:hover .icon-action {
+  color: #9356DC;
+}
+
 /* COMPONENTS */
 header a {
   display: table;
@@ -119,85 +190,6 @@ header #sticky-header #header-logo {
 }
 header #sticky-header #header-logo img {
   max-width: 55%;
-}
-
-/* BLOCKS */
-#block-loc {
-  background-color: #EAEAEA;
-  text-align: center;
-  height: 3em;
-  font-size: 1em;
-  font-weight: bold;
-  font-family: Roboto, sans-serif;
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#block-loc .block-loc-icon {
-  width: 2.5em;
-}
-
-.flex-running-box {
-  display: flex;
-  flex-direction: row;
-  background-color: #F6F6F6;
-  font-family: Roboto, sans-serif;
-  width: 20em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
-  padding: 1.65em 0 1.65em 0;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0.5px 0.5px 10px #c9c9c9;
-}
-.flex-running-box .running-number {
-  display: table;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 20px;
-  left: -10px;
-}
-.flex-running-box .running-number span {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 0.95em;
-  color: #FFFFFF;
-  background-color: #9356DC;
-  margin: 1em 0 1em 0;
-  border: none;
-  border-radius: 100px;
-}
-.flex-running-box .icon-action {
-  display: table;
-  text-align: center;
-  width: 28%;
-  font-size: 1.25em;
-  color: #7d7d7d;
-}
-.flex-running-box .icon-action .fas {
-  display: table-cell;
-  vertical-align: middle;
-}
-.flex-running-box .action-type {
-  display: table;
-  vertical-align: middle;
-  flex: 1;
-}
-.flex-running-box .action-type span {
-  display: table-cell;
-  vertical-align: middle;
-  font-weight: bold;
-}
-.flex-running-box:hover {
-  background-color: #F5EDFF;
-}
-.flex-running-box:hover .icon-action {
-  color: #9356DC;
 }
 
 /* SECTIONS */

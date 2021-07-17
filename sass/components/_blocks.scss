@@ -11,6 +11,9 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 61.594px;
 	.block-loc-icon {
 		width: 2em;
 	}
@@ -66,5 +69,12 @@
 		& .icon-action {
 			color: $colour-primary;
 		}
+	}
+}
+
+.rest-page-bg {
+	img {
+		max-width: 100%;
+		object-fit: cover;
 	}
 }

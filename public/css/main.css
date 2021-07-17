@@ -23,7 +23,7 @@ p {
   margin: 0;
 }
 
-.container, input {
+.container, .container-2, input {
   font-family: Roboto, sans-serif;
 }
 
@@ -53,6 +53,9 @@ a, ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 61.594px;
 }
 #block-loc .block-loc-icon {
   width: 2em;
@@ -109,6 +112,11 @@ a, ul {
 }
 .flex-running-box:hover .icon-action {
   color: #9356DC;
+}
+
+.rest-page-bg img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 /* COMPONENTS */
@@ -168,6 +176,10 @@ a, ul {
 /* CONTAINER */
 .container {
   margin: 0 1.25em;
+}
+
+.container-2 {
+  margin: 0 0.9em;
 }
 
 /* HEADER */
@@ -230,6 +242,62 @@ header #header-logo img {
 #restaurants-section h1 {
   margin: 0;
   padding: 0 0 0.85em 0;
+}
+
+.rest-menu {
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+}
+.rest-menu .rest-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2.2em;
+}
+.rest-menu .rest-title h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.75em;
+}
+.rest-menu .rest-title .heart-bookmark {
+  width: 13%;
+  font-size: 1.5em;
+  text-align: center;
+}
+.rest-menu .meal-type {
+  margin-top: 2.25em;
+}
+.rest-menu .meal-type .meal-type-title h4 {
+  margin: 0;
+  padding-bottom: 0.4em;
+  font-weight: normal;
+}
+.rest-menu .meal-type .meal-type-title .green-line {
+  width: 2.75em;
+  border-bottom: 3px #99E2D0 solid;
+}
+.rest-menu .meal-type .block-meal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4.7em;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}
+.rest-menu .meal-type .block-meal .meal-desc {
+  flex: 1;
+}
+.rest-menu .meal-type .block-meal .meal-price {
+  width: 16%;
+  font-weight: bold;
+  text-align: right;
+}
+.rest-menu .meal-type .block-meal .meal-green-check {
+  width: 5em;
+  background-color: #99E2D0;
+  text-align: center;
 }
 
 /* RESTAURANT TILES */

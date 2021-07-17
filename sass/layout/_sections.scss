@@ -38,6 +38,7 @@
 .rest-menu {
 	background-color: $bg-colour-secondary;
 	border-radius: 50px 50px 0 0;
+	padding-bottom: 1.25em;
 	.rest-title {
 		display: flex;
 		flex-direction: row;
@@ -49,46 +50,24 @@
 			font-size: map-get($font-size, rest-title);
 		}
 		.heart-bookmark {
-			width: 13%;
+			width: 15%;
 			font-size: 1.5em;
 			text-align: center;
 		}
 	}
-	.meal-type {
-		margin-top: 2.25em;
-		.meal-type-title {
-			h4 {
-				margin: 0;
-				padding-bottom: 0.4em;
-				font-weight: normal;
-			}
-			.green-line{
-				width: 2.75em;
-				border-bottom: 3px $colour-tertiary solid;
-			}
+}
+
+.meal-type {
+	margin: 2.25em 0 2.5em 0;
+	.meal-type-title {
+		h4 {
+			margin: 0;
+			padding-bottom: 0.4em;
+			font-weight: normal;
 		}
-		.block-meal {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			height: 4.7em;
-			background-color: $bg-colour-primary;
-			border-radius: 25px;
-			overflow: hidden; 
-			@include basic-box-shadow;
-			.meal-desc {
-				flex: 1;
-			}
-			.meal-price {
-				width: 16%;
-				font-weight: bold;
-				text-align: right;
-			}
-			.meal-green-check {
-				width: 5em;
-				background-color: $colour-tertiary;
-				text-align: center;
-			}
+		.green-line{
+			width: 2.75em;
+			border-bottom: 3px $colour-tertiary solid;
 		}
 	}
 }

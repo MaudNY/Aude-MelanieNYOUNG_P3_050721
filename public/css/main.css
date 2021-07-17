@@ -119,6 +119,43 @@ a, ul {
   object-fit: cover;
 }
 
+.block-meal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4.7em;
+  margin: 1em 0 1em 0;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}
+.block-meal .meal-desc {
+  flex: 1;
+  padding-left: 0.65em;
+}
+.block-meal .meal-desc span {
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+.block-meal .meal-price {
+  min-width: 13%;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1.7em;
+}
+.block-meal .meal-green-check {
+  min-width: 16%;
+  height: 4.7em;
+  line-height: 4.7em;
+  font-size: 2em;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  text-align: center;
+}
+
 /* COMPONENTS */
 #header-btn {
   display: block;
@@ -247,6 +284,7 @@ header #header-logo img {
 .rest-menu {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
+  padding-bottom: 1.25em;
 }
 .rest-menu .rest-title {
   display: flex;
@@ -260,44 +298,22 @@ header #header-logo img {
   font-size: 1.75em;
 }
 .rest-menu .rest-title .heart-bookmark {
-  width: 13%;
+  width: 15%;
   font-size: 1.5em;
   text-align: center;
 }
-.rest-menu .meal-type {
-  margin-top: 2.25em;
+
+.meal-type {
+  margin: 2.25em 0 2.5em 0;
 }
-.rest-menu .meal-type .meal-type-title h4 {
+.meal-type .meal-type-title h4 {
   margin: 0;
   padding-bottom: 0.4em;
   font-weight: normal;
 }
-.rest-menu .meal-type .meal-type-title .green-line {
+.meal-type .meal-type-title .green-line {
   width: 2.75em;
   border-bottom: 3px #99E2D0 solid;
-}
-.rest-menu .meal-type .block-meal {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 4.7em;
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0.5px 0.5px 10px #c9c9c9;
-}
-.rest-menu .meal-type .block-meal .meal-desc {
-  flex: 1;
-}
-.rest-menu .meal-type .block-meal .meal-price {
-  width: 16%;
-  font-weight: bold;
-  text-align: right;
-}
-.rest-menu .meal-type .block-meal .meal-green-check {
-  width: 5em;
-  background-color: #99E2D0;
-  text-align: center;
 }
 
 /* RESTAURANT TILES */

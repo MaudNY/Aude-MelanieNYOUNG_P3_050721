@@ -1,19 +1,15 @@
 /* COMPONENTS */
 
-header a {
-	display: table;
-	width: map-get($block-size, header-btn-size);
-	height: map-get($block-size, header-btn-size);
+#header-btn {
+	display: block;
+	width: 20%;
+	text-align: center;
 	background-color: $bg-colour-primary;
-	border: black;
-	padding: 0;
 	@include weblink-rules (#000000);
 	.fas {
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
 		font-size: map-get($font-size, header-btn-icon);
 		font-weight: bold;
+		padding-top: 0.2em;
 		&--disabled {
 			display: none;
 		}
@@ -24,8 +20,8 @@ header a {
 	display: block;
 	font-size: map-get($font-size, navigation-btn);
 	color: $font-colour-secondary;
-	background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
-	width: 13em;
+	background: $nav-btn-bg-colour;
+	max-width: 13em;
 	text-align: center;
 	padding: 1em 0 1em 0;
 	border: none;

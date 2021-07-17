@@ -46,7 +46,6 @@ a, ul {
   background-color: #EAEAEA;
   text-align: center;
   height: 3em;
-  font-size: 1em;
   font-weight: bold;
   font-family: Roboto, sans-serif;
   background-color: #EAEAEA;
@@ -56,7 +55,7 @@ a, ul {
   align-items: center;
 }
 #block-loc .block-loc-icon {
-  width: 2.5em;
+  width: 2em;
 }
 
 .flex-running-box {
@@ -65,7 +64,7 @@ a, ul {
   align-items: center;
   background-color: #F6F6F6;
   font-family: Roboto, sans-serif;
-  width: 20em;
+  max-width: 20em;
   height: 4.5em;
   margin-left: auto;
   margin-right: auto;
@@ -113,24 +112,20 @@ a, ul {
 }
 
 /* COMPONENTS */
-header a {
-  display: table;
-  width: 4.8em;
-  height: 4.8em;
+#header-btn {
+  display: block;
+  width: 20%;
+  text-align: center;
   background-color: #FFFFFF;
-  border: black;
-  padding: 0;
   text-decoration-line: none;
   color: #000000;
 }
-header a .fas {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 1.75em;
+#header-btn .fas {
+  font-size: 1.5em;
   font-weight: bold;
+  padding-top: 0.2em;
 }
-header a .fas--disabled {
+#header-btn .fas--disabled {
   display: none;
 }
 
@@ -139,7 +134,7 @@ header a .fas--disabled {
   font-size: 1em;
   color: #FFFFFF;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  width: 13em;
+  max-width: 13em;
   text-align: center;
   padding: 1em 0 1em 0;
   border: none;
@@ -177,19 +172,22 @@ header a .fas--disabled {
 
 /* HEADER */
 header {
-  box-shadow: 1.5px 1.5px 5px #a8a8a8;
-  z-index: 9999;
-}
-header #sticky-header {
+  box-shadow: 3px 3px 20px #474747;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: 3.85em;
 }
-header #sticky-header #header-logo {
+header #header-logo {
+  display: table;
   flex: 1;
-  padding: 1.4em 0 0 3.75em;
+  padding-left: 2em;
 }
-header #sticky-header #header-logo img {
-  max-width: 55%;
+header #header-logo img {
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 65%;
+  max-height: 100%;
 }
 
 /* SECTIONS */

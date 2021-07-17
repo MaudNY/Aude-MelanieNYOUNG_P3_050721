@@ -9,9 +9,9 @@ $bg-colour-secondary: #F6F6F6;
 $bg-colour-tertiary: #EAEAEA;
 $bg-colour-quaternary: #353535;
 $font-colour-secondary: #FFFFFF;
+$nav-btn-bg-colour: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
 
 /* Mensurations */
 $container-margin: 1.25em;
-$block-size: (header-btn-size: 4.8em, block-loc-height: 3em);
-$font-size: (header-btn-icon: 1.75em, header-heading: 1.8em, form-input: 1em, navigation-btn: 1em, footer-heading: 1.15em);
+$font-size: (header-btn-icon: 1.5em, header-heading: 1.8em, navigation-btn: 1em, footer-heading: 1.15em);
 $header__heading-margin: 0.6em, 0.4em;

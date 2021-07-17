@@ -1,10 +1,15 @@
 /* HEADER */
 header {
-	box-shadow: 3px 3px 20px #474747;
+	background-color: $bg-colour-primary;
+	box-shadow: 1.5px 1.5px 3px #D1d1d1;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	height: 3.85em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	z-index: 9999;
 	#header-logo {
 		display: table;
 		flex: 1;

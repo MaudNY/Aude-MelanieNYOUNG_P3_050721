@@ -2,7 +2,10 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
-@import "./components/blocks";
+@import "./components/block-localisation";
+@import "./components/block-page-rest-bg";
+@import "./components/blocks-meal";
+@import "./components/blocks-running";
 @import "./components/buttons";
 @import "./layout/container";
 @import "./layout/header";

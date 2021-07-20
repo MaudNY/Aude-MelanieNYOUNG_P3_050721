@@ -34,14 +34,13 @@ a, ul {
 /* Police générique du site ohmyfood */
 @font-face {
   font-family: "Roboto";
-  src: url(./font/police-roboto/Roboto-Regular-webfont.woff), url(./font/police-roboto/Roboto-Regular-webfont.ttf), url(./font/police-roboto/Roboto-Regular-webfont.eot), url(./font/police-roboto/Roboto-Regular-webfont.svg);
+  src: url(../font/police-roboto/Roboto-Regular-webfont.woff), url(../font/police-roboto/Roboto-Regular-webfont.ttf), url(../font/police-roboto/Roboto-Regular-webfont.eot), url(../font/police-roboto/Roboto-Regular-webfont.svg);
 }
 /* Police des titres "Nom de restaurant" et du Footer du site ohmyfood */
 @font-face {
   font-family: "Shrikhand";
-  src: url(./font/police-shrikhand/Shrikhand-Regular.otf);
+  src: url(../font/police-shrikhand/Shrikhand-Regular.otf);
 }
-/* BLOCKS */
 #block-loc {
   background-color: #EAEAEA;
   text-align: center;
@@ -59,59 +58,6 @@ a, ul {
 }
 #block-loc .block-loc-icon {
   width: 2em;
-}
-
-.flex-running-box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #F6F6F6;
-  font-family: Roboto, sans-serif;
-  max-width: 20em;
-  height: 4.5em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0.5px 0.5px 10px #c9c9c9;
-}
-.flex-running-box .running-number {
-  display: table;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 20px;
-  left: -10px;
-}
-.flex-running-box .running-number span {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 0.95em;
-  color: #FFFFFF;
-  background-color: #9356DC;
-  margin: 1em 0 1em 0;
-  border: none;
-  border-radius: 100px;
-}
-.flex-running-box .icon-action {
-  text-align: center;
-  width: 28%;
-  font-size: 1.25em;
-  color: #7d7d7d;
-}
-.flex-running-box .action-type {
-  flex: 1;
-}
-.flex-running-box .action-type span {
-  font-weight: bold;
-}
-.flex-running-box:hover {
-  background-color: #F5EDFF;
-}
-.flex-running-box:hover .icon-action {
-  color: #9356DC;
 }
 
 .rest-page-bg img {
@@ -154,6 +100,58 @@ a, ul {
   color: #FFFFFF;
   background-color: #99E2D0;
   text-align: center;
+}
+
+.flex-running-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F6F6F6;
+  font-family: Roboto, sans-serif;
+  max-width: 20em;
+  height: 4.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0.5px 0.5px 10px #c9c9c9;
+}
+.flex-running-box .running-number {
+  width: 22px;
+  height: 25px;
+  text-align: center;
+  position: absolute;
+  top: 27px;
+  left: -10px;
+}
+.flex-running-box .running-number span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border: none;
+  border-radius: 100px;
+}
+.flex-running-box .icon-action {
+  text-align: center;
+  width: 28%;
+  font-size: 1.25em;
+  color: #7d7d7d;
+}
+.flex-running-box .action-type {
+  flex: 1;
+}
+.flex-running-box .action-type span {
+  font-weight: bold;
+}
+.flex-running-box:hover {
+  background-color: #F5EDFF;
+}
+.flex-running-box:hover .icon-action {
+  color: #9356DC;
 }
 
 /* COMPONENTS */
@@ -239,13 +237,12 @@ header {
   z-index: 9999;
 }
 header #header-logo {
-  display: table;
   flex: 1;
   padding-left: 2em;
 }
 header #header-logo img {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   max-width: 65%;
   max-height: 100%;
 }
@@ -297,7 +294,7 @@ header #header-logo img {
   border-radius: 50px 50px 0 0;
   padding-bottom: 1.25em;
   position: relative;
-  bottom: 52px;
+  margin-top: -52px;
 }
 .rest-menu .rest-title {
   display: flex;

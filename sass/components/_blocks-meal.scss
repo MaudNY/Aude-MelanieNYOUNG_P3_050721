@@ -1,0 +1,36 @@
+.block-meal {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 4.25em;
+	margin: 0.9em 0 0.75em 0;
+	background-color: $bg-colour-primary;
+	border-radius: 18px;
+	overflow: hidden; 
+	@include basic-box-shadow;
+	.meal-desc {
+		flex: 1;
+		padding-left: 0.65em;
+		span {
+			display: inline-block;
+			font-size: 1em;
+			font-weight: bold;
+			padding-bottom: 0.25em;
+		}
+	}
+	.meal-price {
+		min-width: 13%;
+		font-weight: bold;
+		text-align: center;
+		padding-top: 1.7em;
+	}
+	.meal-green-check {
+		min-width: 16%;
+		height: 4.7em;
+		line-height: 4.7em;
+		font-size: 2em;
+		color: $bg-colour-primary;
+		background-color: $colour-tertiary;
+		text-align: center;
+	}
+}

@@ -1,0 +1,19 @@
+#block-loc {
+	background-color: $bg-colour-tertiary;
+	text-align: center;
+	height: 3em;
+	font-size: map-get($font-size, form-input);
+	font-weight: bold;
+	font-family: Roboto, sans-serif;
+	background-color: $bg-colour-tertiary;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 61.594px;
+	.block-loc-icon {
+		width: 2em;
+	}
+}

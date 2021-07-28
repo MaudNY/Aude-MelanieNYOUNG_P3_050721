@@ -10,6 +10,7 @@ $bg-colour-tertiary: #EAEAEA;
 $bg-colour-quaternary: #353535;
 $font-colour-secondary: #FFFFFF;
 $nav-btn-bg-colour: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+$lighter-nav-btn-bg-colour: linear-gradient(to bottom right, lighten($colour-secondary, 5), lighten($colour-primary, 5));
 
 /* Mensurations */
 $container-margin: 1.25em;

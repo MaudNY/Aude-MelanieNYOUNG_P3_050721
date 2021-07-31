@@ -59,6 +59,9 @@
 		.heart-bookmark {
 			font-size: 1.5em;
 			text-align: center;
+			&--rest-page {
+				padding: 0;
+			}
 		}
 	}
 }

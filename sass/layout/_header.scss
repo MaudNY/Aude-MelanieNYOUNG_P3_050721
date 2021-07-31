@@ -2,23 +2,17 @@
 header {
 	background-color: $bg-colour-primary;
 	box-shadow: 1.5px 1.5px 3px #d1d1d1;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	height: 3.85em;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0px;
 	z-index: 9999;
 	#header-logo {
-		display: table;
-		flex: 1;
-		padding-left: 2em;
-		& img {
-			display: table-cell;
-			vertical-align: middle;
-			max-width: 65%;
-			max-height: 30px;
+		display: block;
+		text-align: center;
+		height: 30px;
+		padding: 1.025em 0;
+		img {
+			max-height: 100%;
 		}
 	}
 }

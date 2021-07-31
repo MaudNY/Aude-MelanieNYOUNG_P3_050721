@@ -78,7 +78,10 @@ a, ul {
 }
 .block-meal .meal-desc {
   flex: 1;
-  padding-left: 0.65em;
+  margin-left: 0.65em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .block-meal .meal-desc span {
   display: inline-block;
@@ -87,18 +90,17 @@ a, ul {
   padding-bottom: 0.25em;
 }
 .block-meal .meal-price {
-  min-width: 13%;
   font-weight: bold;
   text-align: center;
-  padding-top: 1.7em;
+  padding: 1.7em 1em 0 0.5em;
 }
 .block-meal .meal-green-check {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 16%;
   height: 100%;
   font-size: 1.25em;
+  padding: 0 1em;
   color: #FFFFFF;
   background-color: #99E2D0;
 }
@@ -188,20 +190,8 @@ a, ul {
   margin-left: auto;
   margin-right: auto;
 }
-.navigation__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.navigation__btn:hover {
   background-color: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-.navigation__btn:hover::after {
-  opacity: 1;
 }
 .navigation__btn--index {
   margin-bottom: 3.5em;
@@ -231,6 +221,11 @@ a, ul {
   display: none;
 }
 
+.heart-bookmark {
+  font-size: 1.5em;
+  text-align: center;
+}
+
 /* CONTAINER */
 .container {
   margin: 0 1.25em;
@@ -243,7 +238,7 @@ a, ul {
 /* HEADER */
 header {
   background-color: #FFFFFF;
-  box-shadow: 1.5px 1.5px 3px #D1d1d1;
+  box-shadow: 1.5px 1.5px 3px #d1d1d1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -262,7 +257,7 @@ header #header-logo img {
   display: table-cell;
   vertical-align: middle;
   max-width: 65%;
-  max-height: 100%;
+  max-height: 30px;
 }
 
 /* SECTIONS */
@@ -318,7 +313,7 @@ header #header-logo img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 2.2em;
+  padding: 2.2em 1.5em 0 0.25em;
 }
 .rest-menu .rest-title h3 {
   flex: 1;
@@ -326,7 +321,6 @@ header #header-logo img {
   font-size: 1.75em;
 }
 .rest-menu .rest-title .heart-bookmark {
-  width: 15%;
   font-size: 1.5em;
   text-align: center;
 }
@@ -371,11 +365,6 @@ header #header-logo img {
   padding-left: 0.75em;
   text-decoration-line: none;
   color: black;
-}
-.block-rest .heart-bookmark {
-  width: 25%;
-  font-size: 1.5em;
-  text-align: center;
 }
 
 /* FOOTER */

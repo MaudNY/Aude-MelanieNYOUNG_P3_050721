@@ -67,4 +67,45 @@
 .heart-bookmark {
 	font-size: 1.5em;
 	padding: 0 1em;
+	.fa-heart--black {
+		transform: scale(1);
+		z-index: 2;
+		&:hover {
+			animation: black-heart-disappearing 1000ms linear forwards;
+		}
+	}
+	.fa-heart--gradient {
+		position: relative;
+		left: 50%;
+		z-index: 1;
+		background: $heart-bookmark-gradient-colour;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transform: scale(0);
+		&:hover {
+			animation: gradient-heart-filling 1000ms cubic-bezier(.17,.67,.83,.67) forwards;
+		}
+	}
+}
+
+@keyframes black-heart-disappearing {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0);
+	}
+}
+
+@keyframes gradient-heart-filling {
+	0%{
+		transform: scale(0);
+	}
+	85% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

@@ -106,7 +106,7 @@ a, ul {
   padding-top: 1.7em;
   padding-right: 1em;
   transform: translateX(65px);
-  transition: transform 400ms ease-out;
+  transition: transform 500ms ease-out;
 }
 .block-meal .meal-green-check {
   display: flex;
@@ -118,7 +118,7 @@ a, ul {
   color: #FFFFFF;
   background-color: #99E2D0;
   transform: translateX(65px);
-  transition: transform 400ms ease-out;
+  transition: transform 500ms ease-out;
 }
 
 @keyframes meal-check-move {
@@ -218,7 +218,8 @@ a, ul {
   margin-right: auto;
 }
 .navigation__btn:hover {
-  background-color: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  box-shadow: 1px 1px 5px #3a3a3a;
 }
 .navigation__btn--index {
   margin-bottom: 3.5em;

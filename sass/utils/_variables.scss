@@ -8,9 +8,10 @@ $bg-colour-primary: #FFFFFF;
 $bg-colour-secondary: #F6F6F6;
 $bg-colour-tertiary: #EAEAEA;
 $bg-colour-quaternary: #353535;
-$font-colour-secondary: #FFFFFF;
 $nav-btn-bg-colour: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
-$lighter-nav-btn-bg-colour: linear-gradient(to bottom right, lighten($colour-secondary, 5), lighten($colour-primary, 5));
+$lighter-nav-btn-bg-colour: linear-gradient(to bottom right, lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
+$font-colour-secondary: #FFFFFF;
+$shadow-nav-btn-colour: #7a7a7a;
 
 /* Mensurations */
 $container-margin: 1.25em;

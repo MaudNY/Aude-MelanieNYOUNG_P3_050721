@@ -8,12 +8,12 @@
 	border-radius: 18px;
 	overflow: hidden; 
 	@include basic-box-shadow;
-	&:hover > .meal-price {
-		transform: translateX(0);
-	}
-	&:hover > .meal-green-check {
-		transform: translateX(0);
-		.fas {
+	&:hover {
+		cursor: pointer;
+		> .meal-price, > .meal-green-check {
+			transform: translateX(0px);
+		}
+		> .meal-green-check .fas {
 			animation: meal-check-move 400ms 100ms ease-out forwards;
 		}
 	}

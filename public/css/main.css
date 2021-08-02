@@ -76,11 +76,11 @@ a, ul {
   overflow: hidden;
   box-shadow: 0.5px 0.5px 10px #c9c9c9;
 }
-.block-meal:hover > .meal-price {
-  transform: translateX(0);
+.block-meal:hover {
+  cursor: pointer;
 }
-.block-meal:hover > .meal-green-check {
-  transform: translateX(0);
+.block-meal:hover > .meal-price, .block-meal:hover > .meal-green-check {
+  transform: translateX(0px);
 }
 .block-meal:hover > .meal-green-check .fas {
   animation: meal-check-move 400ms 100ms ease-out forwards;
@@ -218,7 +218,7 @@ a, ul {
   margin-right: auto;
 }
 .navigation__btn:hover {
-  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  background: linear-gradient(to bottom right, #ff83dd, #985ede);
   box-shadow: 1px 1px 5px #3a3a3a;
 }
 .navigation__btn--index {
@@ -362,7 +362,34 @@ header #header-logo img {
   width: 2.75em;
   border-bottom: 3px #99E2D0 solid;
 }
+.meal-type .block-meal {
+  animation: block-meal-emerge 900ms both;
+}
+.meal-type .block-meal--1 {
+  animation-delay: 150ms;
+}
+.meal-type .block-meal--2 {
+  animation-delay: 300ms;
+}
+.meal-type .block-meal--3 {
+  animation-delay: 450ms;
+}
+.meal-type .block-meal--4 {
+  animation-delay: 600ms;
+}
 
+@keyframes block-meal-emerge {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /* RESTAURANT TILES */
 .block-rest {
   height: 15.7em;

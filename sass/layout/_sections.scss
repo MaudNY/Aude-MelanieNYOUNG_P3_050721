@@ -79,4 +79,26 @@
 			border-bottom: 3px $colour-tertiary solid;
 		}
 	}
+	.block-meal {
+		animation: block-meal-emerge 900ms both;
+		@for $i from 1 through 4 {
+            &--#{$i} {
+                animation-delay: 150ms * $i;
+            }
+		}
+	}
+}
+
+
+@keyframes block-meal-emerge {
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	75%, 100% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }

@@ -23,7 +23,7 @@ p {
   margin: 0;
 }
 
-.container, .container-2, input {
+.container, .container-2, #second-line {
   font-family: Roboto, sans-serif;
 }
 
@@ -40,6 +40,44 @@ a, ul {
 @font-face {
   font-family: "Shrikhand";
   src: url(../font/police-shrikhand/Shrikhand-Regular.otf);
+}
+#block-loading-spinner {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+#block-loading-spinner #first-line {
+  display: flex;
+  flex-direction: row;
+}
+#block-loading-spinner #first-line .meal-icon {
+  font-size: 2em;
+  padding: 0 0.4em;
+}
+#block-loading-spinner #second-line {
+  margin: 0.75em 0;
+}
+#block-loading-spinner #spinner-icon {
+  font-size: 1.5em;
+  transform: rotate(0turn);
+  animation: loading-spinner 3000ms linear;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(2turn);
+  }
 }
 #block-loc {
   background-color: #EAEAEA;
@@ -316,7 +354,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index: 9999;
+  z-index: 10;
 }
 header #header-logo {
   display: block;

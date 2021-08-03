@@ -1,0 +1,38 @@
+#block-loading-spinner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg-colour-primary;
+    #first-line {
+        display: flex;
+        flex-direction: row;
+        .meal-icon {
+            font-size: 2em;
+            padding: 0 0.4em;
+        }
+    }
+    #second-line {
+        margin: 0.75em 0;
+    }
+    #spinner-icon {
+        font-size: 1.5em;
+        transform: rotate(0turn);
+        animation: loading-spinner 3000ms linear;
+    }
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(2turn);
+    }
+}

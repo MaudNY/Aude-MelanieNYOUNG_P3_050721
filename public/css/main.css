@@ -250,28 +250,29 @@ a, ul {
 }
 
 .heart-bookmark {
+  display: flex;
+  flex-direction: row-reverse;
   font-size: 1.5em;
   padding: 0 1em;
 }
 .heart-bookmark .fa-heart--black {
   transform: scale(1);
-  z-index: 2;
 }
 .heart-bookmark .fa-heart--black:hover {
-  animation: black-heart-disappearing 1000ms linear forwards;
+  animation: black-heart-disappearing 350ms linear forwards;
+}
+.heart-bookmark .fa-heart--black:hover + .fa-heart--gradient {
+  animation: gradient-heart-filling 350ms ease forwards;
 }
 .heart-bookmark .fa-heart--gradient {
   position: relative;
   left: 50%;
-  z-index: 1;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(0);
-}
-.heart-bookmark .fa-heart--gradient:hover {
-  animation: gradient-heart-filling 1000ms cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  transform: scale(1);
+  z-index: -1;
 }
 
 @keyframes black-heart-disappearing {
@@ -284,13 +285,19 @@ a, ul {
 }
 @keyframes gradient-heart-filling {
   0% {
-    transform: scale(0);
+    transform: scale(0.1);
+    opacity: 0;
+    z-index: 1;
+  }
+  60% {
+    opacity: 0.5;
   }
   85% {
     transform: scale(1.25);
   }
   100% {
     transform: scale(1);
+    z-index: 1;
   }
 }
 /* CONTAINER */

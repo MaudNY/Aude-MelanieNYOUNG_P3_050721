@@ -7,7 +7,6 @@
 	position: absolute;
 	height: 100%;
 	text-align: center;
-	background-color: $bg-colour-primary;
 	@include weblink-rules (#000000);
 	.fas {
 		font-size: map-get($font-size, header-btn-icon);
@@ -32,6 +31,7 @@
 	box-shadow: 1px 1px 5px $shadow-nav-btn-colour;
 	margin-left: auto;
 	margin-right: auto;
+	transition: all 750ms;
 	&:hover {
         background: $lighter-nav-btn-bg-colour;
 		box-shadow: 1px 1px 5px darken($shadow-nav-btn-colour, 25%);

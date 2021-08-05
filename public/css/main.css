@@ -129,12 +129,16 @@ a, ul {
 .block-meal:hover {
   cursor: pointer;
 }
+.block-meal:hover > .meal-green-check {
+  margin-right: 0px;
+}
 .block-meal:hover > .meal-green-check .fas {
   animation: meal-check-move 400ms 100ms ease-out forwards;
 }
 .block-meal .flex-desc-price {
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
   flex: 1;
   padding: 0 1.5em 0 0.65em;
 }
@@ -166,6 +170,8 @@ a, ul {
   padding: 0 1em;
   color: #FFFFFF;
   background-color: #99E2D0;
+  margin-right: -65px;
+  transition: all 500ms ease-out;
 }
 
 @keyframes meal-check-move {

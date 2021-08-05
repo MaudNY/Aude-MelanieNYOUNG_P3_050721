@@ -129,9 +129,6 @@ a, ul {
 .block-meal:hover {
   cursor: pointer;
 }
-.block-meal:hover > .meal-price, .block-meal:hover > .meal-green-check {
-  transform: translateX(0px);
-}
 .block-meal:hover > .meal-green-check .fas {
   animation: meal-check-move 400ms 100ms ease-out forwards;
 }
@@ -143,6 +140,9 @@ a, ul {
 }
 .block-meal .flex-desc-price .meal-desc {
   flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .block-meal .flex-desc-price .meal-desc .main-meal-name {
   font-size: 1.1em;
@@ -155,6 +155,7 @@ a, ul {
 .block-meal .flex-desc-price .meal-price {
   font-weight: bold;
   text-align: center;
+  padding-left: 1em;
 }
 .block-meal .meal-green-check {
   display: flex;

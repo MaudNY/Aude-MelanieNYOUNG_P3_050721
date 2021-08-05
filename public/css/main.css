@@ -135,28 +135,26 @@ a, ul {
 .block-meal:hover > .meal-green-check .fas {
   animation: meal-check-move 400ms 100ms ease-out forwards;
 }
-.block-meal .meal-desc {
+.block-meal .flex-desc-price {
+  display: flex;
+  align-items: flex-end;
   flex: 1;
-  margin-left: 0.65em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  padding: 0 1.5em 0 0.65em;
 }
-.block-meal .meal-desc .main-meal-name {
-  font-size: 1em;
+.block-meal .flex-desc-price .meal-desc {
+  flex: 1;
+}
+.block-meal .flex-desc-price .meal-desc .main-meal-name {
+  font-size: 1.1em;
   font-weight: bold;
   padding-bottom: 0.25em;
 }
-.block-meal .meal-desc .sec-meal-name {
+.block-meal .flex-desc-price .meal-desc .sec-meal-name {
   font-size: 0.95em;
 }
-.block-meal .meal-price {
+.block-meal .flex-desc-price .meal-price {
   font-weight: bold;
   text-align: center;
-  padding-top: 1.7em;
-  padding-right: 1em;
-  transform: translateX(65px);
-  transition: transform 500ms ease-out;
 }
 .block-meal .meal-green-check {
   display: flex;
@@ -167,8 +165,6 @@ a, ul {
   padding: 0 1em;
   color: #FFFFFF;
   background-color: #99E2D0;
-  transform: translateX(65px);
-  transition: transform 500ms ease-out;
 }
 
 @keyframes meal-check-move {

@@ -110,9 +110,15 @@ a, ul {
   width: 2em;
 }
 
+.rest-page-bg {
+  display: flex;
+  max-height: 254px;
+}
 .rest-page-bg img {
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
+  align-items: center;
+  justify-content: center;
 }
 
 .block-meal {
@@ -164,8 +170,9 @@ a, ul {
 }
 .block-meal .flex-desc-price .meal-price {
   font-weight: bold;
+  font-size: 0.85em;
   text-align: center;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 .block-meal .meal-green-check {
   display: flex;

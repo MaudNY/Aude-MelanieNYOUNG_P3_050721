@@ -1,6 +1,10 @@
 .rest-page-bg {
+	display: flex;
+	max-height: 254px;
 	img {
-		max-width: 100%;
+		width: 100%;
 		object-fit: cover;
+		align-items: center;
+		justify-content: center;
 	}
 }

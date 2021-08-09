@@ -10,7 +10,8 @@
 	position: relative;
 	@include basic-box-shadow;
 	@include tablet-only {
-		min-width: 340px;
+		min-width: 335px;
+		margin-bottom: 2em;
 	}
 	img {
 		min-width: 100%;

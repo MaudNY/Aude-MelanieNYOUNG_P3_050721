@@ -173,7 +173,12 @@ a, ul {
   font-weight: bold;
   font-size: 0.85em;
   text-align: center;
-  padding-left: 0.5em;
+  padding-left: 0.15em;
+}
+@media screen and (min-width: 768px) {
+  .block-meal .flex-desc-price .meal-price {
+    font-size: 1em;
+  }
 }
 .block-meal .meal-green-check {
   display: flex;
@@ -385,8 +390,8 @@ a, ul {
 }
 @media screen and (min-width: 768px) {
   .container {
-    margin: 0 2em;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 708px;
   }
 }
 @media screen and (min-width: 1140px) {
@@ -399,6 +404,12 @@ a, ul {
 .container-2 {
   margin: 0 auto;
   max-width: 346.2px;
+}
+@media screen and (min-width: 768px) {
+  .container-2 {
+    margin: 0 auto;
+    max-width: 490px;
+  }
 }
 
 /* HEADER */
@@ -462,10 +473,10 @@ header #header-logo img {
   padding: 0 0 0.85em 0;
 }
 @media screen and (min-width: 768px) {
-  #restaurants-section #list-rest {
+  #restaurants-section .list-rest {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 
@@ -554,7 +565,8 @@ header #header-logo img {
 }
 @media screen and (min-width: 768px) {
   .block-rest {
-    min-width: 340px;
+    min-width: 335px;
+    margin-bottom: 2em;
   }
 }
 .block-rest img {
@@ -581,6 +593,11 @@ footer {
   background-color: #353535;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
 footer p {
   font-family: Shrikhand, sans-serif;
   font-size: 1.15em;
@@ -589,6 +606,11 @@ footer p {
 footer ul {
   margin: 0;
   padding: 0 0 2em 0;
+}
+@media screen and (min-width: 768px) {
+  footer ul table {
+    margin: 0 auto;
+  }
 }
 footer ul > li {
   list-style-type: none;

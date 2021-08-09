@@ -47,7 +47,10 @@
 			font-weight: bold;
 			font-size: 0.85em;
 			text-align: center;
-			padding-left: 0.5em;
+			padding-left: 0.15em;
+			@include tablet-only {
+				font-size: 1em;
+			}
 		}
 	}
 	.meal-green-check {

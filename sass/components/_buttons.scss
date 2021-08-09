@@ -16,6 +16,13 @@
 			display: none;
 		}
 	}
+	.desktop-header-btn {
+		padding-left: 0.75em;
+		display: none;
+		@include desktop-only {
+			display: initial;
+		}
+	}
 }
 
 .navigation__btn {

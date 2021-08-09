@@ -23,6 +23,9 @@
 	h1 {
 		margin: 2em 0 0 0;
 		padding-bottom: 1.25em;
+		@include tablet-only {
+			text-align: center;
+		}
 	}
 }
 
@@ -32,6 +35,13 @@
 	h1 {
 		margin: 0;
 		padding: 0 0 0.85em 0;
+	}
+	#list-rest {
+		@include tablet-only {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 	}
 }
 

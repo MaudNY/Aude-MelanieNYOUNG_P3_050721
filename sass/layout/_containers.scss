@@ -2,6 +2,14 @@
 .container {
 	margin: 0 auto;
 	max-width: 335px;
+	@include tablet-only {
+		margin: 0 2em;
+		max-width: 100%;
+	}
+	@include desktop-only {
+		margin: 0 5em;
+		max-width: 100%;
+	}
 }
 
 .container-2 {

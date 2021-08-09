@@ -17,3 +17,6 @@ $shadow-nav-btn-colour: #7a7a7a;
 /* Mensurations */
 $font-size: (header-btn-icon: 1.5em, header-heading: 1.8em, navigation-btn: 1em, footer-heading: 1.15em, rest-title: 1.75em);
 $header__heading-margin: 0.6em, 0.4em;
+
+/* RESPONSIVE */
+$breakpoints: (tablet: 768px, desktop: 1140px);

@@ -12,6 +12,9 @@
 	border-radius: 20px;
 	position: relative;
 	@include basic-box-shadow;
+	@include tablet-only {
+		max-width: 25em;
+	}
 	.running-number {
 		display: flex;
 		align-items: center;

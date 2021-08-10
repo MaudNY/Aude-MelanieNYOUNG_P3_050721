@@ -518,7 +518,8 @@ header #header-logo img {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
   }
 }
 

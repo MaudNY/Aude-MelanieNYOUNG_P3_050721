@@ -181,7 +181,7 @@ a, ul {
 }
 .block-meal .flex-desc-price .meal-price {
   font-weight: bold;
-  font-size: 0.85em;
+  font-size: 1.15em;
   text-align: center;
   padding-left: 0.15em;
 }
@@ -316,7 +316,7 @@ a, ul {
   box-shadow: 1px 1px 5px #7a7a7a;
   margin-left: auto;
   margin-right: auto;
-  transition: all 750ms;
+  transition: background, box-shadow 750ms;
 }
 .navigation__btn:hover {
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
@@ -578,16 +578,16 @@ header #header-logo img {
   animation: block-meal-emerge 1000ms 500ms both;
 }
 .meal-type .block-meal--1 {
-  animation-delay: 500ms;
+  animation-delay: 750ms;
 }
 .meal-type .block-meal--2 {
-  animation-delay: 1000ms;
-}
-.meal-type .block-meal--3 {
   animation-delay: 1500ms;
 }
+.meal-type .block-meal--3 {
+  animation-delay: 2250ms;
+}
 .meal-type .block-meal--4 {
-  animation-delay: 2000ms;
+  animation-delay: 3000ms;
 }
 
 @keyframes block-meal-emerge {
@@ -641,7 +641,7 @@ header #header-logo img {
 .block-rest .block-rest-desc .block-rest-info {
   flex: 1;
   color: black;
-  padding-left: 0.75em;
+  padding: 0 0 0.5em 0.75em;
   text-decoration-line: none;
   color: black;
 }
@@ -656,25 +656,20 @@ footer p {
   font-size: 1.15em;
   padding: 1.25em 0 0.65em 0;
 }
-footer ul {
-  margin: 0;
-  padding: 0 0 2em 0;
+footer a {
+  display: flex;
+  flex-direction: row;
 }
-footer ul > li {
-  list-style-type: none;
-}
-footer ul > li a {
+footer span {
+  display: inline-block;
   text-decoration-line: none;
   color: #FFFFFF;
 }
-footer ul td {
-  min-width: 20px;
-  height: 1.25em;
+footer span .footer-icon {
+  width: 20px;
 }
-footer ul .footer-icon {
-  vertical-align: middle;
-  text-align: left;
-  font-size: 0.75em;
+footer span .footer-icon .fas {
+  width: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,23 +8,18 @@ footer {
 		font-size: map-get($font-size, footer-heading);
 		padding: 1.25em 0 0.65em 0;
 	}
-	ul {
-		margin: 0;
-		padding: 0 0 2em 0;
+	a {
+		display: flex;
+		flex-direction: row;
 	}
-	ul > li {
-		list-style-type: none;
-		a {
-			@include weblink-rules(#FFFFFF);
+	span {
+		display: inline-block;
+		@include weblink-rules (#FFFFFF);
+		.footer-icon {
+			width: 20px;
+			.fas {
+				width: 16px;
+			}
 		}
-	}
-	ul td {
-		min-width: 20px;
-		height: 1.25em;
-	}
-	ul .footer-icon {
-		vertical-align: middle;
-		text-align: left;
-		font-size: 0.75em;
 	}
 }

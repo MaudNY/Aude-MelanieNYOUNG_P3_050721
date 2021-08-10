@@ -123,7 +123,7 @@
 		animation: block-meal-emerge 1000ms 500ms both;
 		@for $i from 1 through 4 {
             &--#{$i} {
-                animation-delay: 500ms * $i;
+                animation-delay: 750ms * $i;
             }
 		}
 	}

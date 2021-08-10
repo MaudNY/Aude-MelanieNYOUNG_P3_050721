@@ -9,6 +9,9 @@
 	overflow: hidden;
 	@include basic-box-shadow;
 	transition: transform 650ms ease-out;
+	@include desktop-only {
+		width: 350px;
+	}
 	&:hover {
 		cursor: pointer;
 		> .flex-desc-price {

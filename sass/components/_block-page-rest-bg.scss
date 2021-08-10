@@ -1,6 +1,9 @@
 .rest-page-bg {
 	display: flex;
 	max-height: 254px;
+	@include desktop-only {
+		max-height: 300px;
+	}
 	img {
 		width: 100%;
 		object-fit: cover;

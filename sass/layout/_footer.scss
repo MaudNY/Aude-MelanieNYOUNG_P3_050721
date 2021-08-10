@@ -3,9 +3,6 @@
 footer {
 	background-color: $bg-colour-quaternary;
 	color: $font-colour-secondary;
-	@include tablet-only {
-		text-align: center;
-	}
 	p {
 		font-family: Shrikhand, sans-serif;
 		font-size: map-get($font-size, footer-heading);
@@ -14,11 +11,6 @@ footer {
 	ul {
 		margin: 0;
 		padding: 0 0 2em 0;
-	}
-	ul table {
-		@include tablet-only {
-			margin: 0 auto;
-		}
 	}
 	ul > li {
 		list-style-type: none;

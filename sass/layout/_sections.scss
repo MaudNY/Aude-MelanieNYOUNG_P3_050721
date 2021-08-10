@@ -20,6 +20,9 @@
 #running-section {
 	background-color: $bg-colour-primary;
 	margin-bottom: 4.25em;
+	@include desktop-only {
+		margin-bottom: 1.5em;
+	}
 	h1 {
 		margin: 2em 0 0 0;
 		padding-bottom: 1.25em;
@@ -28,6 +31,7 @@
 		}
 		@include desktop-only {
 			text-align: left;
+			margin: 1em 0 0 0;
 		}
 	}
 	#running-boxes-list {
@@ -89,6 +93,14 @@
 			&--rest-page {
 				padding: 0;
 			}
+		}
+	}
+	.row-desktop {
+		@include desktop-only {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			overflow: hidden;
 		}
 	}
 }

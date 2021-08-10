@@ -45,11 +45,19 @@
 		margin: 0;
 		padding: 0 0 0.85em 0;
 	}
-	.list-rest {
+	.row-tablet {
 		@include tablet-only {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
+		}
+	}
+	.row-desktop {
+		@include desktop-only {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: scroll;
 		}
 	}
 }

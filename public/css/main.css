@@ -489,10 +489,18 @@ header #header-logo img {
   padding: 0 0 0.85em 0;
 }
 @media screen and (min-width: 768px) {
-  #restaurants-section .list-rest {
+  #restaurants-section .row-tablet {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1140px) {
+  #restaurants-section .row-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
   }
 }
 
@@ -583,6 +591,13 @@ header #header-logo img {
   .block-rest {
     min-width: 335px;
     margin-bottom: 2em;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .block-rest {
+    max-width: 335px;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
   }
 }
 .block-rest img {

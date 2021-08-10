@@ -26,6 +26,15 @@
 		@include tablet-only {
 			text-align: center;
 		}
+		@include desktop-only {
+			text-align: left;
+		}
+	}
+	#running-boxes-list {
+		@include desktop-only {
+			display: flex;
+			flex-direction: row;
+		}
 	}
 }
 

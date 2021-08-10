@@ -7,8 +7,8 @@
 		max-width: 708px;
 	}
 	@include desktop-only {
-		margin: 0 5em;
-		max-width: 100%;
+		margin: 0 auto;
+		max-width: 1080px;
 	}
 }
 

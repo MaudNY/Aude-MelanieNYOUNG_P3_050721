@@ -654,7 +654,10 @@ footer {
 footer p {
   font-family: Shrikhand, sans-serif;
   font-size: 1.15em;
-  padding: 1.25em 0 0.65em 0;
+  padding: 1.25em 0 0.85em 0;
+}
+footer .footer-list {
+  padding: 0 0 1.75em 0;
 }
 footer a {
   display: flex;
@@ -662,14 +665,17 @@ footer a {
 }
 footer span {
   display: inline-block;
+  padding-bottom: 0.3em;
   text-decoration-line: none;
   color: #FFFFFF;
 }
-footer span .footer-icon {
-  width: 20px;
+footer .footer-icon {
+  display: inline-block;
+  width: 13px;
+  padding-right: 1em;
 }
-footer span .footer-icon .fas {
-  width: 16px;
+footer .footer-icon .fas {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

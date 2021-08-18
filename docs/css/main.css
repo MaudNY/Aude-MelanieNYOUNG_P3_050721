@@ -366,7 +366,6 @@ a, ul {
 .heart-bookmark .fa-heart--gradient {
   position: absolute;
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1);
@@ -507,19 +506,15 @@ header #header-logo img {
   padding: 0 0 0.85em 0;
 }
 @media screen and (min-width: 768px) {
-  #restaurants-section .row-tablet {
+  #restaurants-section .row-responsive {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 1140px) {
-  #restaurants-section .row-desktop {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    overflow-x: scroll;
+  #restaurants-section .row-responsive {
+    justify-content: space-around;
   }
 }
 
@@ -622,7 +617,7 @@ header #header-logo img {
 }
 @media screen and (min-width: 1140px) {
   .block-rest {
-    max-width: 335px;
+    width: 400px;
     margin-left: 0.75em;
     margin-right: 0.75em;
   }

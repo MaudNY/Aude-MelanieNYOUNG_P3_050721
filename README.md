@@ -4,7 +4,7 @@
 
 <h1>Getting started</h1>
 
-*If you only want to visit this application, in the right section of this page, click on ` github-pages `, then ` View deployment `*
+*If you only want to visit this application, click [here](https://maudny.github.io/P3_050721_ohmyfood/)*
 
 1. Create a local dedicated folder in your computer and open your code editor
 2. Open the created folder and open a new terminal
